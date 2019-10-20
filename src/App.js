@@ -4,36 +4,37 @@ import { BoardStyle, CellStyle } from "./board-styles";
 import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
 
-function createMatrix(size) {
-  const matrix = [];
-  for (let i = 0; i < size; i++) {
-    const arr = [];
-    for (let j = 0; j < size; j++) {
-      arr.push(false);
-    }
-    matrix.push(arr);
-  }
-  return matrix;
-}
-
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      matrix: createMatrix(40),
-      size: 40
-    };
 
     this.handleCellClick = this.handleCellClick.bind(this);
     this.handleNext = this.handleNext.bind(this);
     this.clearBoard = this.clearBoard.bind(this);
+    this.createMatrix = this.createMatrix.bind(this);
+    this.state = {
+      matrix: this.createMatrix(40),
+      size: 40
+    };
+  }
+
+  createMatrix(size) {
+    const matrix = [];
+    for (let i = 0; i < size; i++) {
+      const arr = [];
+      for (let j = 0; j < size; j++) {
+        arr.push(false);
+      }
+      matrix.push(arr);
+    }
+    return matrix;
   }
 
   handleCellClick(index) {
     const { size, matrix } = this.state;
     const x = Math.floor(index / size);
     const y = index % size;
-    const newBoard = createMatrix(size);
+    const newBoard = this.createMatrix(size);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if (i === x && j === y) {
@@ -51,7 +52,7 @@ class App extends React.Component {
   handleNext() {
     const { matrix } = this.state;
 
-    const nextBoard = createMatrix(matrix.length);
+    const nextBoard = this.createMatrix(matrix.length);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         const allAliveNeighbours = countAliveNeighbours(i, j, matrix);
@@ -66,7 +67,7 @@ class App extends React.Component {
 
   clearBoard() {
     const { matrix } = this.state;
-    const nextBoard = createMatrix(matrix.length);
+    const nextBoard = this.createMatrix(matrix.length);
     this.setState({
       matrix: nextBoard
     });
