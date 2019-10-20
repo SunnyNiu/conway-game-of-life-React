@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cornways-react/static/css/main.b100e6da.chunk.css",
-    "main.js": "/cornways-react/static/js/main.06ff079c.chunk.js",
-    "main.js.map": "/cornways-react/static/js/main.06ff079c.chunk.js.map",
+    "main.js": "/cornways-react/static/js/main.d44e1b97.chunk.js",
+    "main.js.map": "/cornways-react/static/js/main.d44e1b97.chunk.js.map",
     "runtime-main.js": "/cornways-react/static/js/runtime-main.d9e64491.js",
     "runtime-main.js.map": "/cornways-react/static/js/runtime-main.d9e64491.js.map",
     "static/js/2.15eb1a7b.chunk.js": "/cornways-react/static/js/2.15eb1a7b.chunk.js",
     "static/js/2.15eb1a7b.chunk.js.map": "/cornways-react/static/js/2.15eb1a7b.chunk.js.map",
     "index.html": "/cornways-react/index.html",
-    "precache-manifest.adb66698f6ee4fff00984cf9f071b604.js": "/cornways-react/precache-manifest.adb66698f6ee4fff00984cf9f071b604.js",
+    "precache-manifest.a5646661c2d52c32a041366ab77c4019.js": "/cornways-react/precache-manifest.a5646661c2d52c32a041366ab77c4019.js",
     "service-worker.js": "/cornways-react/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/cornways-react/static/css/main.b100e6da.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d9e64491.js",
     "static/js/2.15eb1a7b.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.06ff079c.chunk.js"
+    "static/js/main.d44e1b97.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2195d05806d95d95b05be7a2b3dcb38",
+    "revision": "7b17a2c283e97b97db57324c3cc685ff",
     "url": "/cornways-react/index.html"
   },
   {
-    "revision": "bb9fac36b2c2b8ec1026",
+    "revision": "6ec852ed5db5b05b3ae1",
     "url": "/cornways-react/static/css/main.b100e6da.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cornways-react/static/js/2.15eb1a7b.chunk.js"
   },
   {
-    "revision": "bb9fac36b2c2b8ec1026",
-    "url": "/cornways-react/static/js/main.06ff079c.chunk.js"
+    "revision": "6ec852ed5db5b05b3ae1",
+    "url": "/cornways-react/static/js/main.d44e1b97.chunk.js"
   },
   {
     "revision": "cc6e7a0f555553fe7c68",

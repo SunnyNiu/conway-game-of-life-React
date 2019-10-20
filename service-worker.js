@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cornways-react/precache-manifest.adb66698f6ee4fff00984cf9f071b604.js"
+  "/cornways-react/precache-manifest.a5646661c2d52c32a041366ab77c4019.js"
 );
 
 self.addEventListener('message', (event) => {
