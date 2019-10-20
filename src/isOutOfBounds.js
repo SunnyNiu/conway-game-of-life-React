@@ -1,4 +1,4 @@
-function isOutOfBounds(index, array) {
+export function isOutOfBounds(index, array) {
   const length = array.length;
   if (index >= length || index < 0) {
     return true;
@@ -6,5 +6,3 @@ function isOutOfBounds(index, array) {
     return false;
   }
 }
-
-module.exports = isOutOfBounds;

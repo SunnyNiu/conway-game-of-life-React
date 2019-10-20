@@ -1,6 +1,6 @@
 const indicesAreOutOfBounds = require("./indicesAreOutOfBounds");
 
-function getNeighbours(cellRow, cellColumn, board) {
+export function getNeighbours(cellRow, cellColumn, board) {
   const allNeighbourPositions = [
     [cellRow - 1, cellColumn - 1],
     [cellRow - 1, cellColumn],
@@ -16,5 +16,3 @@ function getNeighbours(cellRow, cellColumn, board) {
     .filter(([x, y]) => !indicesAreOutOfBounds(x, y, board))
     .map(([x, y]) => board[x][y]);
 }
-
-module.exports = getNeighbours;
