@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BoardStyle, CellStyle } from "./board-styles";
-const nextCellState = require("./nextCellState");
-const countAliveNeighbours = require("./countAliveNeighbours");
+import { nextCellState } from "./nextCellState";
+import { countAliveNeighbours } from "./countAliveNeighbours";
 
 function createMatrix(size) {
   const matrix = [];
