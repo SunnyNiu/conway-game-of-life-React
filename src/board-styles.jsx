@@ -5,6 +5,7 @@ export const BoardStyle = styled.div`
   grid-template-columns: ${props => props.columns};
   background-color: black;
   padding: 10px;
+  flex-direction: column;
 `;
 
 export const CellStyle = styled.div`

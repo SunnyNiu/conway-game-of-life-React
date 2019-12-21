@@ -3,6 +3,8 @@ import "./App.css";
 import { BoardStyle, CellStyle } from "./board-styles";
 import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
+import {GameOfLive, HeaderWrapper, GameTitle, Body, Gutter,Content} from './gameOfLive-styles'
+import GameText from './GameText'
 
 class App extends React.Component {
   constructor() {
@@ -79,9 +81,15 @@ class App extends React.Component {
     }
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <BoardStyle columns={columns}>
+      <GameOfLive>
+          <HeaderWrapper>
+            <GameTitle>The Game of Life</GameTitle>
+          </HeaderWrapper>
+          <Content>
+            <Gutter/>
+            <Body>
+              <GameText></GameText>
+            <BoardStyle columns={columns}>
             {this.state.matrix
               .reduce((acc, item) => acc.concat(item), [])
               .map((item, index) => (
@@ -94,12 +102,14 @@ class App extends React.Component {
                 </CellStyle>
               ))}
           </BoardStyle>
+          </Body>
+            <Gutter/>
+          </Content>
           <div>
             <button onClick={this.handleNext}>Next</button>
             <button onClick={this.clearBoard}>Clear</button>
           </div>
-        </header>
-      </div>
+      </GameOfLive>
     );
   }
 }
