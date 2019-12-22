@@ -38,7 +38,6 @@ export const BoardBody = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
   color: white;
 `
 
@@ -53,22 +52,22 @@ export const Paragraph = styled.p`
   color: palevioletred;
   background-color: #ffffff;
 `
-export const Content = styled.div`
-  color: palevioletred;
-  text-align: center;
-  background-color: #ffffff;
-  grid-template-columns: 1fr 5fr 1fr;
-  display: grid;
-  flex-direction: column;
-`
-
-export const Gutter = styled.div`
-  color: palevioletred;
-  text-align: center;
-  background-color: #ffffff;
-`
 
 export const Body = styled.div`
   text-align: center;
   background-color: #ffffff;
+`
+
+export const Format = styled.div`
+  text-align: center;
+  background-color: #ffffff;
+`
+export const Gutter = styled(Format)`
+  color: palevioletred;
+`
+export const Content = styled(Format)`
+  color: palevioletred;
+  grid-template-columns: 1fr 5fr 1fr;
+  display: grid;
+  flex-direction: column;
 `
