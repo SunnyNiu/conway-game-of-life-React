@@ -75,3 +75,13 @@ export const Content = styled(Format)`
   display: grid;
   flex-direction: column;
 `
+
+export const Button = styled.button`
+  display: inline;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;

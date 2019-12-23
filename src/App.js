@@ -6,7 +6,13 @@ import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
 import Cell from './Cell';
 import Grid from './Grid'
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+import {Button} from './style/gameOfLive-styles'
 
+const options = [
+  'clear', 'Glider', 'small Exploder', 'Exploder', '10 Cell Row', 'Lightweight spaceship', 'Tumbler', 'Gosper Glider Gun'
+]
 class App extends React.Component {
   constructor() {
     super();
@@ -80,7 +86,7 @@ class App extends React.Component {
     for (let i = 0; i < this.state.size; i++) {
       columns += "auto ";
     }
-
+    const defaultOption = options[0]
     return (
       <Grid
       columns ="100px 1fr 100px"
@@ -106,8 +112,14 @@ class App extends React.Component {
               ))}
           </Grid>
           <div>
-            <button onClick={this.handleNext}>Next</button>
-            <button onClick={this.clearBoard}>Clear</button>
+         
+            <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+            <Button onClick={this.handleNext}>Next</Button>
+            <Button onClick={this.clearBoard}>Clear</Button>
+            <label>Speed</label>
+            <input id="speed" type="range" min="10" max="500" step="49" value="10" title="speed dial"></input>
+            <label>Zoom Out/In</label>
+            <input id="size" type="range" min="2" max="11" value="2" title="grid size"></input>
           </div>
           <GameRulesAndDes/>
         </Cell>
