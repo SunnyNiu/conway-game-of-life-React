@@ -8,10 +8,10 @@ import Cell from './Cell';
 import Grid from './Grid'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import {Button} from './style/gameOfLive-styles'
+import {Button, DropdownType, Input, Label} from './style/gameOfLive-styles'
 
 const options = [
-  'clear', 'Glider', 'small Exploder', 'Exploder', '10 Cell Row', 'Lightweight spaceship', 'Tumbler', 'Gosper Glider Gun'
+  'clear', 'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler', 'Gosper-Glider Gun'
 ]
 class App extends React.Component {
   constructor() {
@@ -111,16 +111,29 @@ class App extends React.Component {
                 </CellStyle>
               ))}
           </Grid>
-          <div>
-         
-            <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+          <Grid columns="100px 70px 70px 50px 130px 90px 130px 1fr">   
+            <Cell>    
+            <DropdownType className="" options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />
+            </Cell>
+            <Cell> 
             <Button onClick={this.handleNext}>Next</Button>
+            </Cell>
+            <Cell> 
             <Button onClick={this.clearBoard}>Clear</Button>
-            <label>Speed</label>
-            <input id="speed" type="range" min="10" max="500" step="49" value="10" title="speed dial"></input>
-            <label>Zoom Out/In</label>
-            <input id="size" type="range" min="2" max="11" value="2" title="grid size"></input>
-          </div>
+            </Cell>
+            <Cell> 
+            Speed
+            </Cell>
+            <Cell> 
+            <Input id="speed" type="range" min="10" max="500" step="49" value="10" title="speed dial"></Input>
+            </Cell>
+            <Cell> 
+            <Label>Zoom&nbsp;Out/In</Label>
+            </Cell>
+            <Cell> 
+            <Input id="size" type="range" min="2" max="11" value="2" title="grid size"></Input>
+            </Cell>
+          </Grid>
           <GameRulesAndDes/>
         </Cell>
         <Cell>{"    "}</Cell>

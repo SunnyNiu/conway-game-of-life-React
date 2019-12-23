@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Dropdown from 'react-dropdown'
 
 export const GameOfLive = styled.section`
   text-align: center;
@@ -81,7 +82,17 @@ export const Button = styled.button`
   color: palevioletred;
   font-size: 1em;
   margin: 1em;
-  padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
 `;
+
+export const DropdownType = styled(Dropdown)`
+  margin: 0.5em;
+`
+export const Input = styled.input`
+  margin: 1em;
+`
+export const Label = styled.label`
+  margin-top: 10px;
+  padding: 10px
+`
