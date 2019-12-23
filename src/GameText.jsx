@@ -1,5 +1,5 @@
 import React from 'react'
-import {Title, Paragraph} from './gameOfLive-styles'
+import {Title, Paragraph} from './style/gameOfLive-styles'
 
 class GameText extends React.Component{
   render () {

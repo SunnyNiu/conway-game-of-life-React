@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import { BoardStyle, CellStyle } from "./board-styles";
+import { BoardStyle, CellStyle } from "./style/board-styles";
 import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
-import {GameOfLive, HeaderWrapper, GameTitle, Body, Gutter,Content} from './gameOfLive-styles'
+import {GameOfLive, HeaderWrapper, GameTitle, Body, Gutter,Content} from './style/gameOfLive-styles'
 import GameText from './GameText'
 
 class App extends React.Component {
