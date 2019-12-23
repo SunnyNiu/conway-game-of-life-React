@@ -53,6 +53,10 @@ export const Paragraph = styled.p`
   background-color: #ffffff;
 `
 
+export const BorderParagraph = styled(Paragraph)`
+  font-weight: bold;
+`
+
 export const Body = styled.div`
   text-align: center;
   background-color: #ffffff;

@@ -3,7 +3,7 @@ import "./App.css";
 import { BoardStyle, CellStyle } from "./style/board-styles";
 import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
-import {GameOfLive, HeaderWrapper, GameTitle, Body, Gutter,Content} from './style/gameOfLive-styles'
+import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
 import Cell from './Cell';
 import Grid from './Grid'
@@ -110,6 +110,7 @@ class App extends React.Component {
             <button onClick={this.handleNext}>Next</button>
             <button onClick={this.clearBoard}>Clear</button>
           </div>
+          <GameRulesAndDes/>
         </Cell>
         <Cell>{"    "}</Cell>
         <Cell width={3}>
