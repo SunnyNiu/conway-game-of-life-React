@@ -8,7 +8,7 @@ const gap = ({gap = '8px'}) => gap;
 const Grid = styled.div`
   display: grid;
   height: ${({ height = "auto" }) => height};
-  grid-auto-flow: ${(flow = 'row') => flow};
+  grid-auto-flow: ${({flow = 'row'}) => flow};
   grid-auto-rows: ${autoRows};
   ${({ rows }) => rows && `grid-template-rows: ${frGetter(rows)}`};
   grid-template-columns: ${({ columns = 12 }) => frGetter(columns)};
@@ -25,8 +25,7 @@ Grid.propTypes = {
   height: PropTypes.string,
   minRowHeight: PropTypes.string,
   flow: PropTypes.string,
-  rows: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  areas: PropTypes.arrayOf(PropTypes.string)
+  rows: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 export default Grid;

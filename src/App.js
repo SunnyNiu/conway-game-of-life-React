@@ -5,6 +5,8 @@ import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
 import {GameOfLive, HeaderWrapper, GameTitle, Body, Gutter,Content} from './style/gameOfLive-styles'
 import GameText from './GameText'
+import Cell from './Cell';
+import Grid from './Grid'
 
 class App extends React.Component {
   constructor() {
@@ -81,15 +83,17 @@ class App extends React.Component {
     }
 
     return (
-      <GameOfLive>
-          <HeaderWrapper>
-            <GameTitle>The Game of Life</GameTitle>
-          </HeaderWrapper>
-          <Content>
-            <Gutter/>
-            <Body>
-              <GameText></GameText>
-            <BoardStyle columns={columns}>
+      <Grid
+      columns ="100px 1fr 100px"
+      rows= {"minmax(45px, auto) 1fr minmax(45px, auto)"}
+      >
+        <Cell width ={3} center>
+        <h1>The Game of Life</h1>
+        </Cell>
+        <Cell></Cell>
+        <Cell center>
+          <GameText></GameText>
+          <BoardStyle columns={columns}>
             {this.state.matrix
               .reduce((acc, item) => acc.concat(item), [])
               .map((item, index) => (
@@ -102,14 +106,15 @@ class App extends React.Component {
                 </CellStyle>
               ))}
           </BoardStyle>
-          </Body>
-            <Gutter/>
-          </Content>
           <div>
             <button onClick={this.handleNext}>Next</button>
             <button onClick={this.clearBoard}>Clear</button>
           </div>
-      </GameOfLive>
+        </Cell>
+        <Cell>{"    "}</Cell>
+        <Cell width={3}>
+          </Cell>  
+      </Grid>
     );
   }
 }
