@@ -93,7 +93,7 @@ class App extends React.Component {
         <Cell></Cell>
         <Cell center>
           <GameText></GameText>
-          <BoardStyle columns={columns}>
+          <Grid gap="0" columns={columns}>
             {this.state.matrix
               .reduce((acc, item) => acc.concat(item), [])
               .map((item, index) => (
@@ -105,7 +105,7 @@ class App extends React.Component {
                   {" "}
                 </CellStyle>
               ))}
-          </BoardStyle>
+          </Grid>
           <div>
             <button onClick={this.handleNext}>Next</button>
             <button onClick={this.clearBoard}>Clear</button>
