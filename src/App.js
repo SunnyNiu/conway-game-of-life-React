@@ -1,6 +1,5 @@
 import React from "react";
-import "./App.css";
-import { BoardStyle, CellStyle } from "./style/board-styles";
+import { CellStyle } from "./style/board-styles";
 import { nextCellState } from "./nextCellState";
 import { countAliveNeighbours } from "./countAliveNeighbours";
 import GameRulesAndDes from './GameRulesAndDescription'
