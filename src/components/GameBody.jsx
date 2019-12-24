@@ -12,7 +12,7 @@ import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 
 const options = [
-  'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler', 'Gosper-Glider Gun'
+  'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler'
 ]
 class GameBody extends React.Component {
     constructor() {
@@ -73,213 +73,110 @@ class GameBody extends React.Component {
 
   gliderGame = () =>{
     const matrix = createMatrix(40)
-    const [x1, y1] = [20, 23] 
-    const [x2, y2] = [21, 24]
-    const [x3, y3] = [22, 22]
-    const [x4, y4] = [22, 23]
-    const [x5, y5] = [22, 24]
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || (i === x2 && j === y2) || (i === x3 && j === y3) || (i === x4 && j === y4) || (i === x5 && j === y5)) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[20][23] = !matrix[20][23]
+    board[21][24] = !matrix[21][24]
+    board[22][22] = !matrix[22][22]
+    board[22][23] = !matrix[22][23]
+    board[22][24] = !matrix[22][24]
     this.props.dispatch(newBoard(board))
   }
 
   smallExploder = () => {
     const matrix = createMatrix(40)
-
-    const [x1, y1] = [18, 18] 
-    const [x2, y2] = [19, 17]
-    const [x3, y3] = [19, 18]
-    const [x4, y4] = [19, 19]
-    const [x5, y5] = [20, 17]
-    const [x6, y6] = [20, 19]
-    const [x7, y7] = [21, 18]
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || 
-        (i === x2 && j === y2) || 
-        (i === x3 && j === y3) || 
-        (i === x4 && j === y4) || 
-        (i === x5 && j === y5) ||
-        (i === x6 && j === y6) ||
-        (i === x7 && j === y7) ) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[18][18] = !matrix[18][18]
+    board[19][17] = !matrix[19][17]
+    board[19][18] = !matrix[19][18]
+    board[19][19] = !matrix[19][19]
+    board[20][17] = !matrix[20][17]
+    board[20][19] = !matrix[20][19]
+    board[21][18] = !matrix[21][18]
+
     this.props.dispatch(newBoard(board))
   }
 
   exploder = () =>{
     const matrix = createMatrix(40)
-    const [x1, y1] = [17, 17] 
-    const [x2, y2] = [17, 19]
-    const [x3, y3] = [17, 21]
-    const [x4, y4] = [18, 17]
-    const [x5, y5] = [18, 21]
-    const [x6, y6] = [19, 17]
-    const [x7, y7] = [19, 21]
-    const [x8, y8] = [20, 17]
-    const [x9, y9] = [20, 21]
-    const [x10, y10] = [21, 17]
-    const [x11, y11] = [21, 19]
-    const [x12, y12] = [21, 21]
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || 
-        (i === x2 && j === y2) || 
-        (i === x3 && j === y3) || 
-        (i === x4 && j === y4) || 
-        (i === x5 && j === y5) ||
-        (i === x6 && j === y6) ||
-        (i === x7 && j === y7) ||
-        (i === x8 && j === y8) ||
-        (i === x9 && j === y9) ||
-        (i === x10 && j === y10) ||
-        (i === x11 && j === y11) ||
-        (i === x12 && j === y12) ) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[17][17] = !matrix[17][17]
+    board[17][19] = !matrix[17][19]
+    board[17][21] = !matrix[17][21]
+    board[18][17] = !matrix[18][17]
+    board[18][21] = !matrix[18][21]
+    board[19][17] = !matrix[19][17]
+    board[19][21] = !matrix[19][21]
+    board[20][17] = !matrix[20][17]
+    board[20][21] = !matrix[20][21]
+    board[21][17] = !matrix[21][17]
+    board[21][19] = !matrix[21][19]
+    board[21][21] = !matrix[21][21]
+  
     this.props.dispatch(newBoard(board))
   }
 
   tenCellRow = () =>{
     const matrix = createMatrix(40)
-    const [x1, y1] = [15, 15] 
-    const [x2, y2] = [15, 16]
-    const [x3, y3] = [15, 17]
-    const [x4, y4] = [15, 18]
-    const [x5, y5] = [15, 19]
-    const [x6, y6] = [15, 20]
-    const [x7, y7] = [15, 21]
-    const [x8, y8] = [15, 22]
-    const [x9, y9] = [15, 23]
-    const [x10, y10] = [15, 24]
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || 
-        (i === x2 && j === y2) || 
-        (i === x3 && j === y3) || 
-        (i === x4 && j === y4) || 
-        (i === x5 && j === y5) ||
-        (i === x6 && j === y6) ||
-        (i === x7 && j === y7) ||
-        (i === x8 && j === y8) ||
-        (i === x9 && j === y9) ||
-        (i === x10 && j === y10) ) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[15][15] = !matrix[15][15]
+    board[15][16] = !matrix[15][16]
+    board[15][17] = !matrix[15][17]
+    board[15][18] = !matrix[15][18]
+    board[15][19] = !matrix[15][19]
+    board[15][20] = !matrix[15][20]
+    board[15][21] = !matrix[15][21]
+    board[15][22] = !matrix[15][22]
+    board[15][23] = !matrix[15][23]
+    board[15][24] = !matrix[15][24]
+  
     this.props.dispatch(newBoard(board))
   }
 
   lightweight = () => {
     const matrix = createMatrix(40)
-    const [x1, y1] = [17, 17] 
-    const [x2, y2] = [17, 18]
-    const [x3, y3] = [17, 19]
-    const [x4, y4] = [17, 20]
-    const [x5, y5] = [18, 16]
-    const [x6, y6] = [18, 20]
-    const [x7, y7] = [19, 20]
-    const [x8, y8] = [20, 16]
-    const [x9, y9] = [20, 19]
+
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || 
-        (i === x2 && j === y2) || 
-        (i === x3 && j === y3) || 
-        (i === x4 && j === y4) || 
-        (i === x5 && j === y5) ||
-        (i === x6 && j === y6) ||
-        (i === x7 && j === y7) ||
-        (i === x8 && j === y8) ||
-        (i === x9 && j === y9) ) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[17][17] = !matrix[17][17]
+    board[17][18] = !matrix[17][18]
+    board[17][19] = !matrix[17][19]
+    board[17][20] = !matrix[17][20]
+    board[18][16] = !matrix[18][16]
+    board[18][20] = !matrix[18][20]
+    board[19][20] = !matrix[19][20]
+    board[20][16] = !matrix[20][16]
+    board[20][19] = !matrix[20][19]
+  
     this.props.dispatch(newBoard(board))
   }
 
 
   tumbler = () =>{ 
     const matrix = createMatrix(40)
-    const [x1, y1] = [15, 16] 
-    const [x2, y2] = [15, 17]
-    const [x3, y3] = [15, 19]
-    const [x4, y4] = [15, 20]
-    const [x5, y5] = [16, 16]
-    const [x6, y6] = [16, 17]
-    const [x7, y7] = [16, 19]
-    const [x8, y8] = [16, 20]
-    const [x9, y9] = [17, 17]
-    const [x10, y10] = [17, 19] 
-    const [x11, y11] = [18, 15]
-    const [x12, y12] = [18, 17]
-    const [x13, y13] = [18, 19]
-    const [x14, y14] = [18, 21]
-    const [x15, y15] = [19, 15]
-    const [x16, y16] = [19, 17]
-    const [x17, y17] = [19, 19]
-    const [x18, y18] = [19, 21]
-    const [x19, y19] = [20, 15]
-    const [x20, y20] = [20, 16]
-    const [x21, y21] = [20, 20]
-    const [x22, y22] = [20, 21]
+
     const board = createMatrix(40);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if ((i === x1 && j === y1) || 
-        (i === x2 && j === y2) || 
-        (i === x3 && j === y3) || 
-        (i === x4 && j === y4) || 
-        (i === x5 && j === y5) ||
-        (i === x6 && j === y6) ||
-        (i === x7 && j === y7) ||
-        (i === x8 && j === y8) ||
-        (i === x9 && j === y9) ||
-        (i === x10 && j === y10) ||
-        (i === x11 && j === y11) ||
-        (i === x12 && j === y12) ||
-        (i === x13 && j === y13) ||
-        (i === x14 && j === y14) ||
-        (i === x15 && j === y15) ||
-        (i === x16 && j === y16) ||
-        (i === x17 && j === y17) ||
-        (i === x18 && j === y18) ||
-        (i === x19 && j === y19) ||
-        (i === x20 && j === y20) ||
-        (i === x21 && j === y21) ||
-        (i === x22 && j === y22)) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    board[15][16] = !matrix[15][16]
+    board[15][17] = !matrix[15][17]
+    board[15][19] = !matrix[15][19]
+    board[15][20] = !matrix[15][20]
+    board[16][16] = !matrix[16][16]
+    board[16][17] = !matrix[16][17]
+    board[16][19] = !matrix[16][19]
+    board[16][20] = !matrix[16][20]
+    board[17][17] = !matrix[17][17]
+    board[17][19] = !matrix[17][19]
+    board[18][15] = !matrix[18][15]
+    board[18][17] = !matrix[18][17]
+    board[18][19] = !matrix[18][19]
+    board[18][21] = !matrix[18][21]
+    board[19][15] = !matrix[19][15]
+    board[19][17] = !matrix[19][17]
+    board[19][19] = !matrix[19][19]
+    board[19][21] = !matrix[19][21]
+    board[20][15] = !matrix[20][16]
+    board[20][16] = !matrix[20][16]
+    board[20][20] = !matrix[20][20]
+    board[20][21] = !matrix[20][21]
+  
     this.props.dispatch(newBoard(board))
   }
   changeHandle = (e) => {
