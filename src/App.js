@@ -11,7 +11,7 @@ import 'react-dropdown/style.css'
 import {Button, DropdownType, Input, Label} from './style/gameOfLive-styles'
 
 const options = [
-  'Clear', 'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler', 'Gosper-Glider Gun'
+  'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler', 'Gosper-Glider Gun'
 ]
 class App extends React.Component {
   constructor() {
@@ -109,6 +109,7 @@ class App extends React.Component {
   }
 
   gliderGame(){
+    this.clearBoard()
     const { size, matrix } = this.state;
     const [x1, y1] = [20, 23] 
     const [x2, y2] = [21, 24]
@@ -131,6 +132,7 @@ class App extends React.Component {
   }
 
   smallExploder(){
+    this.clearBoard()
     const { size, matrix } = this.state;
     const [x1, y1] = [18, 18] 
     const [x2, y2] = [19, 17]
@@ -161,6 +163,7 @@ class App extends React.Component {
   }
 
   exploder(){
+    this.clearBoard()
     const { size, matrix } = this.state;
     const [x1, y1] = [17, 17] 
     const [x2, y2] = [17, 19]
@@ -201,6 +204,7 @@ class App extends React.Component {
   }
 
   tenCellRow(){
+    this.clearBoard()
     const { size, matrix } = this.state;
     const [x1, y1] = [15, 15] 
     const [x2, y2] = [15, 16]
@@ -295,7 +299,7 @@ class App extends React.Component {
           </Grid>
           <Grid columns="100px 70px 70px 50px 130px 90px 130px 1fr">   
             <Cell>    
-            <DropdownType className="" options={options} onChange={this.changeHandle} value={this.state.selected} placeholder="Select an option" />
+            <DropdownType className="" options={options} onChange={this.changeHandle} value={this.state.selected} />
             </Cell>
             <Cell> 
             <Button onClick={this.handleNext}>Next</Button>
