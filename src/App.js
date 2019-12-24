@@ -27,7 +27,7 @@ class App extends React.Component {
       size: 40,
       selected: '',
       startOrStop: 'Start',
-      speed: 1000
+      speed: 1,
     };
   }
 
@@ -90,7 +90,7 @@ class App extends React.Component {
 
       this.intervalID = setInterval(
         () => this.handleNext(),
-        this.state.speed
+        this.state.speed * 1000
       )
     }else if(status === 'Stop'){
       this.setState({
@@ -256,15 +256,22 @@ class App extends React.Component {
       case '10-Cell-Row':
         this.tenCellRow()
         break
-      case 'Lightweight-spaceship':
-        break
-      case 'Tumbler':
-        break
-      case 'Gosper-Glider Gun':
-        break
       default:
         return    
     }
+  }
+
+  speedChange(value){
+    const currentSpeed = this.state.speed
+    const updatedSpeed = currentSpeed/value
+    this.setState({
+      speed: updatedSpeed
+    })
+    clearInterval(this.intervalID)
+    this.intervalID = setInterval(
+      () => this.handleNext(),
+      this.state.speed * 1000
+    )
   }
 
   render() {
@@ -314,7 +321,7 @@ class App extends React.Component {
             Speed
             </Cell>
             <Cell> 
-            <Input id="speed" type="range" min="10" max="500" step="49" value="10" title="speed dial"></Input>
+            <Input id="speed" type="range" min="1" max="10" step="1" value={this.state.speed} onChange={e => this.speedChange(e.target.value)}  title="speed dial"/>
             </Cell>
             <Cell> 
             <Label>Zoom&nbsp;Out/In</Label>
