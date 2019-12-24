@@ -241,6 +241,42 @@ class App extends React.Component {
       matrix: newBoard
     });
   }
+
+  lightweight(){
+    const matrix = this.createMatrix(40)
+    const size = this.state.size
+    const [x1, y1] = [17, 17] 
+    const [x2, y2] = [17, 18]
+    const [x3, y3] = [17, 19]
+    const [x4, y4] = [17, 20]
+    const [x5, y5] = [18, 16]
+    const [x6, y6] = [18, 20]
+    const [x7, y7] = [19, 20]
+    const [x8, y8] = [20, 16]
+    const [x9, y9] = [20, 19]
+    const newBoard = this.createMatrix(size);
+    for (let i = 0; i < matrix.length; i++) {
+      for (let j = 0; j < matrix[i].length; j++) {
+        if ((i === x1 && j === y1) || 
+        (i === x2 && j === y2) || 
+        (i === x3 && j === y3) || 
+        (i === x4 && j === y4) || 
+        (i === x5 && j === y5) ||
+        (i === x6 && j === y6) ||
+        (i === x7 && j === y7) ||
+        (i === x8 && j === y8) ||
+        (i === x9 && j === y9) ) {
+          newBoard[i][j] = !matrix[i][j];
+        } else {
+          newBoard[i][j] = matrix[i][j];
+        }
+      }
+    }
+    this.setState({
+      matrix: newBoard
+    });
+  }
+
   changeHandle(e){
     this.setState({
       selected: e.value
@@ -258,6 +294,9 @@ class App extends React.Component {
       case '10-Cell-Row':
         this.tenCellRow()
         break
+      case 'Lightweight-spaceship':
+        this.lightweight()
+        break   
       default:
         return    
     }
