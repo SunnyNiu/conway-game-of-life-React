@@ -6,7 +6,6 @@ import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
 import Cell from './Cell';
 import Grid from './Grid'
-import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import {Button, DropdownType, Input, Label} from './style/gameOfLive-styles'
 
@@ -27,7 +26,8 @@ class App extends React.Component {
       matrix: this.createMatrix(40),
       size: 40,
       selected: '',
-      startOrStop: 'Start'
+      startOrStop: 'Start',
+      speed: 1000
     };
   }
 
@@ -75,11 +75,10 @@ class App extends React.Component {
         const allAliveNeighbours = countAliveNeighbours(i, j, matrix);
         nextBoard[i][j] = nextCellState(matrix[i][j], allAliveNeighbours);
       }
-
-      this.setState({
-        matrix: nextBoard
-      });
     }
+    this.setState({
+      matrix: nextBoard
+    });
   }
 
   handleStart(){
@@ -91,12 +90,13 @@ class App extends React.Component {
 
       this.intervalID = setInterval(
         () => this.handleNext(),
-        1000
+        this.state.speed
       )
     }else if(status === 'Stop'){
       this.setState({
         startOrStop: 'Start'
       })
+      clearInterval(this.intervalID)
     }
   }
 
