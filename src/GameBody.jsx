@@ -17,16 +17,10 @@ const options = [
 class GameBody extends React.Component {
     constructor() {
     super();
-
-    this.handleCellClick = this.handleCellClick.bind(this);
-    this.handleNext = this.handleNext.bind(this);
-    this.clearBoard = this.clearBoard.bind(this);
-    this.changeHandle = this.changeHandle.bind(this)
-    this.handleStart = this.handleStart.bind(this)
     this.speedChange = debounce(this.speedChange, 300);
   }
 
-  handleCellClick(index) {
+  handleCellClick = (index) => {
     const { size, matrix } = this.props;
     const x = Math.floor(index / size);
     const y = index % size;
@@ -43,7 +37,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(board))
   }
 
-  handleNext() {
+  handleNext = () =>{
     const { matrix } = this.props;
 
     const nextBoard = createMatrix(matrix.length);
@@ -56,7 +50,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(nextBoard))
   }
 
-  handleStart(){
+  handleStart = () =>{
     const status = this.props.startOrStop
     if(status === 'Start'){
       this.props.dispatch(setStartOrStop('Stop'))
@@ -71,13 +65,13 @@ class GameBody extends React.Component {
     }
   }
 
-  clearBoard() {
+  clearBoard = () => {
     const { matrix } = this.props;
     const nextBoard = createMatrix(matrix.length);
     this.props.dispatch(newBoard(nextBoard))
   }
 
-  gliderGame(){
+  gliderGame = () =>{
     const matrix = createMatrix(40)
     const [x1, y1] = [20, 23] 
     const [x2, y2] = [21, 24]
@@ -97,7 +91,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(board))
   }
 
-  smallExploder(){
+  smallExploder = () => {
     const matrix = createMatrix(40)
 
     const [x1, y1] = [18, 18] 
@@ -126,7 +120,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(board))
   }
 
-  exploder(){
+  exploder = () =>{
     const matrix = createMatrix(40)
     const [x1, y1] = [17, 17] 
     const [x2, y2] = [17, 19]
@@ -164,7 +158,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(board))
   }
 
-  tenCellRow(){
+  tenCellRow = () =>{
     const matrix = createMatrix(40)
     const [x1, y1] = [15, 15] 
     const [x2, y2] = [15, 16]
@@ -198,7 +192,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(board))
   }
 
-  lightweight(){
+  lightweight = () => {
     const matrix = createMatrix(40)
     const [x1, y1] = [17, 17] 
     const [x2, y2] = [17, 18]
@@ -231,7 +225,7 @@ class GameBody extends React.Component {
   }
 
 
-  tumbler(){ 
+  tumbler = () =>{ 
     const matrix = createMatrix(40)
     const [x1, y1] = [15, 16] 
     const [x2, y2] = [15, 17]
@@ -288,7 +282,7 @@ class GameBody extends React.Component {
     }
     this.props.dispatch(newBoard(board))
   }
-  changeHandle(e){
+  changeHandle = (e) => {
     this.props.dispatch(setSelectedType(e.value))
     switch(e.value){
       case 'Glider':
@@ -314,7 +308,7 @@ class GameBody extends React.Component {
     }
   }
 
-  speedChange(value){
+  speedChange = (value) =>{
     this.props.dispatch(setSpeed(value))
     clearInterval(this.intervalID)
     this.intervalID = setInterval(
@@ -322,6 +316,7 @@ class GameBody extends React.Component {
       1000 / this.props.speed
     )
   }
+
   render(){
     let columns = "";
     for (let i = 0; i < this.props.size; i++) {
