@@ -6,6 +6,7 @@ import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
 import Cell from './Cell';
 import Grid from './Grid'
+import debounce from 'lodash/debounce'
 import 'react-dropdown/style.css'
 import {Button, DropdownType, Input, Label} from './style/gameOfLive-styles'
 
@@ -22,6 +23,7 @@ class App extends React.Component {
     this.createMatrix = this.createMatrix.bind(this);
     this.changeHandle = this.changeHandle.bind(this)
     this.handleStart = this.handleStart.bind(this)
+    this.speedChange = debounce(this.speedChange, 300);
     this.state = {
       matrix: this.createMatrix(40),
       size: 40,
@@ -109,8 +111,8 @@ class App extends React.Component {
   }
 
   gliderGame(){
-    this.clearBoard()
-    const { size, matrix } = this.state;
+    const matrix = this.createMatrix(40)
+    const size = this.state.size
     const [x1, y1] = [20, 23] 
     const [x2, y2] = [21, 24]
     const [x3, y3] = [22, 22]
@@ -132,8 +134,8 @@ class App extends React.Component {
   }
 
   smallExploder(){
-    this.clearBoard()
-    const { size, matrix } = this.state;
+    const matrix = this.createMatrix(40)
+    const size = this.state.size
     const [x1, y1] = [18, 18] 
     const [x2, y2] = [19, 17]
     const [x3, y3] = [19, 18]
@@ -163,8 +165,8 @@ class App extends React.Component {
   }
 
   exploder(){
-    this.clearBoard()
-    const { size, matrix } = this.state;
+    const matrix = this.createMatrix(40)
+    const size = this.state.size
     const [x1, y1] = [17, 17] 
     const [x2, y2] = [17, 19]
     const [x3, y3] = [17, 21]
@@ -204,8 +206,8 @@ class App extends React.Component {
   }
 
   tenCellRow(){
-    this.clearBoard()
-    const { size, matrix } = this.state;
+    const matrix = this.createMatrix(40)
+    const size = this.state.size
     const [x1, y1] = [15, 15] 
     const [x2, y2] = [15, 16]
     const [x3, y3] = [15, 17]
@@ -262,15 +264,13 @@ class App extends React.Component {
   }
 
   speedChange(value){
-    const currentSpeed = this.state.speed
-    const updatedSpeed = currentSpeed/value
     this.setState({
-      speed: updatedSpeed
+      speed: value
     })
     clearInterval(this.intervalID)
     this.intervalID = setInterval(
       () => this.handleNext(),
-      this.state.speed * 1000
+      1000 / this.state.speed
     )
   }
 
