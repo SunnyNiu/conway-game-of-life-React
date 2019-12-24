@@ -29,7 +29,7 @@ class App extends React.Component {
       size: 40,
       selected: '',
       startOrStop: 'Start',
-      speed: 1,
+      speed: 1
     };
   }
 
@@ -318,16 +318,10 @@ class App extends React.Component {
             <Button onClick={this.clearBoard}>Clear</Button>
             </Cell>
             <Cell> 
-            Speed
+             Speed
             </Cell>
             <Cell> 
             <Input id="speed" type="range" min="1" max="10" step="1" value={this.state.speed} onChange={e => this.speedChange(e.target.value)}  title="speed dial"/>
-            </Cell>
-            <Cell> 
-            <Label>Zoom&nbsp;Out/In</Label>
-            </Cell>
-            <Cell> 
-            <Input id="size" type="range" min="2" max="11" value="2" title="grid size"></Input>
             </Cell>
           </Grid>
           <GameRulesAndDes/>
