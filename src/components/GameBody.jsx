@@ -1,13 +1,13 @@
 import React from "react";
-import { CellStyle } from "./style/board-styles";
-import { nextCellState } from "./nextCellState";
-import { countAliveNeighbours } from "./countAliveNeighbours";
+import { CellStyle } from "../style/board-styles";
+import { nextCellState } from "../nextCellState";
+import { countAliveNeighbours } from "../countAliveNeighbours";
 import Cell from './Cell';
 import Grid from './Grid'
 import 'react-dropdown/style.css'
-import {Button, DropdownType, Input} from './style/gameOfLive-styles'
-import createMatrix from './utility'
-import {newBoard, setStartOrStop, setSelectedType, setSpeed} from './redux/action'
+import {Button, DropdownType, Input, Speed} from '../style/gameOfLive-styles'
+import createMatrix from '../utility'
+import {newBoard, setStartOrStop, setSelectedType, setSpeed} from '../redux/action'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 
@@ -337,7 +337,7 @@ class GameBody extends React.Component {
                 </CellStyle>
               ))}
           </Grid>
-          <Grid columns="100px 70px 70px 50px 130px 90px 130px 1fr">   
+          <Grid >   
             <Cell>    
             <DropdownType className="" options={options} onChange={this.changeHandle} value={this.props.selected} />
             </Cell>
@@ -351,7 +351,7 @@ class GameBody extends React.Component {
             <Button onClick={this.clearBoard}>Clear</Button>
             </Cell>
             <Cell> 
-             Speed
+             <Speed>Speed:</Speed>
             </Cell>
             <Cell> 
             <Input id="speed" type="range" min="1" max="10" step="1" value={this.props.speed} onChange={e => this.speedChange(e.target.value)}  title="speed dial"/>

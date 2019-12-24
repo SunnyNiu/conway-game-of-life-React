@@ -1,5 +1,5 @@
 import React from 'react'
-import {Title, Paragraph, BorderParagraph} from './style/gameOfLive-styles'
+import {Title, Paragraph, BorderParagraph} from '../style/gameOfLive-styles'
 
 class GameRulesAndDes extends React.Component{
   render () {

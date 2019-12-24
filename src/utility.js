@@ -8,6 +8,6 @@ function createMatrix(size) {
     matrix.push(arr);
   }
   return matrix;
-}
+};
 
 export default createMatrix

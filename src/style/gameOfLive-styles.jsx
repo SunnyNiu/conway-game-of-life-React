@@ -86,11 +86,20 @@ export const Button = styled.button`
   border-radius: 3px;
 `;
 
+export const Speed = styled.button`
+  display: inline;
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  border: 2px none palevioletred;
+  border-radius: 3px;
+`;
+
 export const DropdownType = styled(Dropdown)`
   margin: 0.5em;
 `
 export const Input = styled.input`
-  margin: 1em;
+  margin: 2em;
 `
 export const Label = styled.label`
   margin-top: 10px;
