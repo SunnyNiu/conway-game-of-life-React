@@ -45,30 +45,30 @@ class App extends React.Component {
     const { size, matrix } = this.props;
     const x = Math.floor(index / size);
     const y = index % size;
-    const newBoard = this.createMatrix(size);
+    const board = createMatrix(size);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if (i === x && j === y) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
   handleNext() {
     const { matrix } = this.props;
 
-    const nextBoard = this.createMatrix(matrix.length);
+    const nextBoard = createMatrix(matrix.length);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         const allAliveNeighbours = countAliveNeighbours(i, j, matrix);
         nextBoard[i][j] = nextCellState(matrix[i][j], allAliveNeighbours);
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(nextBoard))
   }
 
   handleStart(){
@@ -99,17 +99,17 @@ class App extends React.Component {
     const [x3, y3] = [22, 22]
     const [x4, y4] = [22, 23]
     const [x5, y5] = [22, 24]
-    const newBoard = createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || (i === x2 && j === y2) || (i === x3 && j === y3) || (i === x4 && j === y4) || (i === x5 && j === y5)) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
   smallExploder(){
@@ -122,7 +122,7 @@ class App extends React.Component {
     const [x5, y5] = [20, 17]
     const [x6, y6] = [20, 19]
     const [x7, y7] = [21, 18]
-    const newBoard = createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || 
@@ -132,13 +132,13 @@ class App extends React.Component {
         (i === x5 && j === y5) ||
         (i === x6 && j === y6) ||
         (i === x7 && j === y7) ) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
   exploder(){
@@ -155,7 +155,7 @@ class App extends React.Component {
     const [x10, y10] = [21, 17]
     const [x11, y11] = [21, 19]
     const [x12, y12] = [21, 21]
-    const newBoard = createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || 
@@ -170,13 +170,13 @@ class App extends React.Component {
         (i === x10 && j === y10) ||
         (i === x11 && j === y11) ||
         (i === x12 && j === y12) ) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
   tenCellRow(){
@@ -191,7 +191,7 @@ class App extends React.Component {
     const [x8, y8] = [15, 22]
     const [x9, y9] = [15, 23]
     const [x10, y10] = [15, 24]
-    const newBoard = createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || 
@@ -204,13 +204,13 @@ class App extends React.Component {
         (i === x8 && j === y8) ||
         (i === x9 && j === y9) ||
         (i === x10 && j === y10) ) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
   lightweight(){
@@ -224,7 +224,7 @@ class App extends React.Component {
     const [x7, y7] = [19, 20]
     const [x8, y8] = [20, 16]
     const [x9, y9] = [20, 19]
-    const newBoard = this.createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || 
@@ -236,18 +236,18 @@ class App extends React.Component {
         (i === x7 && j === y7) ||
         (i === x8 && j === y8) ||
         (i === x9 && j === y9) ) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
 
 
   tumbler(){ 
-    const matrix = this.createMatrix(40)
+    const matrix = createMatrix(40)
     const [x1, y1] = [15, 16] 
     const [x2, y2] = [15, 17]
     const [x3, y3] = [15, 19]
@@ -270,7 +270,7 @@ class App extends React.Component {
     const [x20, y20] = [20, 16]
     const [x21, y21] = [20, 20]
     const [x22, y22] = [20, 21]
-    const newBoard = this.createMatrix(40);
+    const board = createMatrix(40);
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         if ((i === x1 && j === y1) || 
@@ -295,13 +295,13 @@ class App extends React.Component {
         (i === x20 && j === y20) ||
         (i === x21 && j === y21) ||
         (i === x22 && j === y22)) {
-          newBoard[i][j] = !matrix[i][j];
+          board[i][j] = !matrix[i][j];
         } else {
-          newBoard[i][j] = matrix[i][j];
+          board[i][j] = matrix[i][j];
         }
       }
     }
-    this.props.dispatch(newBoard(newBoard))
+    this.props.dispatch(newBoard(board))
   }
   changeHandle(e){
     this.props.dispatch(setSelectedType(e.value))
@@ -343,7 +343,6 @@ class App extends React.Component {
     for (let i = 0; i < this.props.size; i++) {
       columns += "auto ";
     }
-    // const defaultOption = options[0]
     return (
       <Grid
       columns ="100px 1fr 100px"
