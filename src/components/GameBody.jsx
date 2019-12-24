@@ -1,11 +1,10 @@
 import React from "react";
-import { CellStyle } from "../style/board-styles";
 import { nextCellState } from "../nextCellState";
 import { countAliveNeighbours } from "../countAliveNeighbours";
 import Cell from './Cell';
 import Grid from './Grid'
 import 'react-dropdown/style.css'
-import {Button, DropdownType, Input, Speed} from '../style/gameOfLive-styles'
+import {Button, DropdownType, Input, Speed, CellStyle} from '../style/gameOfLive-styles'
 import createMatrix from '../utility'
 import {newBoard, setStartOrStop, setSelectedType, setSpeed} from '../redux/action'
 import { connect } from 'react-redux'
