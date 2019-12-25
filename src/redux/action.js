@@ -3,14 +3,12 @@ export const newBoard = (newBoard) => ({
   payload: newBoard
 })
 
-export const setStart = () => ({
-  type: 'SET_START',
-  payload: 'Stop'
+export const startGame = () => ({
+  type: 'START_GAME'
 })
 
-export const setStop = () => ({
-  type: 'SET_STOP',
-  payload: 'Start'
+export const stopGame = () => ({
+  type: 'STOP_GAME'
 })
 
 export const setSelectedType = (type) => ({

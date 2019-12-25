@@ -8,18 +8,18 @@ class GameRulesAndDes extends React.Component {
         <Title>The Rules</Title>
         <BorderParagraph>For a space that is 'populated':</BorderParagraph>
         <Paragraph>
-          {' '} Each cell with one or no neighbors dies, as if by solitude.
+          &nbsp;Each cell with one or no neighbors dies, as if by solitude.
         </Paragraph>
         <Paragraph>
-          {' '} Each cell with four or more neighbors dies, as if by overpopulation.
+          &nbsp;Each cell with four or more neighbors dies, as if by overpopulation.
         </Paragraph>
         <Paragraph>
-          {' '} Each cell with two or three neighbors survives.
+          &nbsp;Each cell with two or three neighbors survives.
         </Paragraph>
 
         <BorderParagraph>For a space that is 'empty' or 'unpopulated'</BorderParagraph>
         <Paragraph>
-          {' '} Each cell with three neighbors becomes populated.
+          &nbsp;Each cell with three neighbors becomes populated.
         </Paragraph>
 
         <Title>The Controls</Title>

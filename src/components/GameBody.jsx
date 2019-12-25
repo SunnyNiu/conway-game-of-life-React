@@ -6,7 +6,7 @@ import Grid from './Grid'
 import 'react-dropdown/style.css'
 import { Button, DropdownType, Input, Speed, CellStyle } from '../style/gameOfLive-styles'
 import createMatrix from '../utility'
-import { newBoard, setStart, setStop, setSelectedType, setSpeed } from '../redux/action'
+import { newBoard, startGame, stopGame, setSelectedType, setSpeed } from '../redux/action'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 import cloneDeep from 'lodash/cloneDeep'
@@ -21,16 +21,16 @@ class GameBody extends React.Component {
   }
 
   handleCellClick = (index) => {
-    const { size, matrix } = this.props
+    const { size, matrix, dispatch } = this.props
     const x = Math.floor(index / size)
     const y = index % size
     const board = cloneDeep(matrix)
     board[x][y] = !board[x][y]
-    this.props.dispatch(newBoard(board))
+    dispatch(newBoard(board))
   }
 
   handleNext = () => {
-    const { matrix } = this.props
+    const { matrix, dispatch } = this.props
     const nextBoard = cloneDeep(matrix)
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
@@ -38,29 +38,28 @@ class GameBody extends React.Component {
         nextBoard[i][j] = nextCellState(matrix[i][j], allAliveNeighbours)
       }
     }
-    this.props.dispatch(newBoard(nextBoard))
+    dispatch(newBoard(nextBoard))
   }
 
   handleStartStop = () => {
-    const { startOrStop, speed } = this.props
-    const status = startOrStop
-    if (status === 'Start') {
-      this.props.dispatch(setStart())
+    const { speed, dispatch, isRunning } = this.props
+    if (!isRunning) {
+      dispatch(startGame())
 
       this.intervalID = setInterval(
         () => this.handleNext(),
         speed * 1000
       )
     } else {
-      this.props.dispatch(setStop())
+      dispatch(stopGame())
       clearInterval(this.intervalID)
     }
   }
 
   clearBoard = () => {
-    const { matrix } = this.props
+    const { matrix, dispatch } = this.props
     const nextBoard = createMatrix(matrix.length)
-    this.props.dispatch(newBoard(nextBoard))
+    dispatch(newBoard(nextBoard))
   }
 
   gliderGame = () => {
@@ -146,7 +145,7 @@ class GameBody extends React.Component {
   }
 
   render () {
-    const { size, matrix, selected, speed, startOrStop } = this.props
+    const { size, matrix, selected, speed, isRunning } = this.props
     let columns = ''
     for (let i = 0; i < size; i++) {
       columns += 'auto '
@@ -174,7 +173,7 @@ class GameBody extends React.Component {
             <Button onClick={this.handleNext}>Next</Button>
           </Cell>
           <Cell>
-            <Button onClick={this.handleStartStop}>{startOrStop}</Button>
+            {isRunning ? <Button onClick={this.handleStartStop}>Stop</Button> : <Button onClick={this.handleStartStop}>Start</Button>}
           </Cell>
           <Cell>
             <Button onClick={this.clearBoard}>Clear</Button>
@@ -196,7 +195,7 @@ const mapStateToProps = state => {
     matrix: state.matrix,
     size: state.size,
     selected: state.selected,
-    startOrStop: state.startOrStop,
+    isRunning: state.isRunning,
     speed: state.speed
   }
 }

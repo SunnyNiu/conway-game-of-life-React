@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   matrix: createMatrix(40),
   size: 40,
   selected: '',
-  startOrStop: 'Start',
+  isRunning: false,
   speed: 1
 }
 
@@ -12,11 +12,11 @@ const gameReducer = (state = INITIAL_STATE, action) => {
     case 'SET_NEW_BOARD': {
       return { ...state, matrix: action.payload }
     }
-    case 'SET_START': {
-      return { ...state, startOrStop: action.payload }
+    case 'START_GAME': {
+      return { ...state, isRunning: true }
     }
-    case 'SET_STOP': {
-      return { ...state, startOrStop: action.payload }
+    case 'STOP_GAME': {
+      return { ...state, isRunning: false }
     }
     case 'SET_SELECTED_TYPE': {
       return { ...state, selected: action.payload }

@@ -22,7 +22,7 @@ class App extends React.Component {
           <GameBody/>
           <GameRulesAndDes/>
         </Cell>
-        <Cell>{'    '}</Cell>
+        <Cell></Cell>
         <Cell width={3}>
         </Cell>
       </Grid>
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
     matrix: state.matrix,
     size: state.size,
     selected: state.selected,
-    startOrStop: state.startOrStop,
+    isRunning: state.isRunning,
     speed: state.speed
   }
 }
