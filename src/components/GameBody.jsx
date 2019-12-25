@@ -64,8 +64,6 @@ class GameBody extends React.Component {
   }
 
   gliderGame = () => {
-    const x = gliderGameBoard()
-    console.log('x', x)
     this.props.dispatch(newBoard(gliderGameBoard()))
   }
 
