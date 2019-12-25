@@ -12,7 +12,10 @@ const gameReducer = (state=INITIAL_STATE, action) =>{
     case 'SET_NEW_BOARD':{
       return {...state, matrix:action.payload}
     }
-    case 'SET_START_OR_STOP':{
+    case 'SET_START':{
+      return {...state, startOrStop:action.payload}
+    }
+    case 'SET_STOP':{
       return {...state, startOrStop:action.payload}
     }
     case 'SET_SELECTED_TYPE':{

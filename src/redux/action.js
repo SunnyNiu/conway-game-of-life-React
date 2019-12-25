@@ -3,9 +3,14 @@ export const newBoard = (newBoard) =>({
   payload:newBoard
 })
 
-export const setStartOrStop = (status) =>({
-  type:'SET_START_OR_STOP',
-  payload:status
+export const setStart = () =>({
+  type:'SET_START',
+  payload:'Stop'
+})
+
+export const setStop = () =>({
+  type:'SET_STOP',
+  payload:'Start'
 })
 
 export const setSelectedType = (type) =>({

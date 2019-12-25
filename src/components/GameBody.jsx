@@ -6,7 +6,7 @@ import Grid from './Grid'
 import 'react-dropdown/style.css'
 import {Button, DropdownType, Input, Speed, CellStyle} from '../style/gameOfLive-styles'
 import createMatrix from '../utility'
-import {newBoard, setStartOrStop, setSelectedType, setSpeed} from '../redux/action'
+import {newBoard, setStart, setStop, setSelectedType, setSpeed} from '../redux/action'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
 import cloneDeep from 'lodash/cloneDeep'
@@ -45,14 +45,14 @@ class GameBody extends React.Component {
     const {startOrStop, speed} = this.props
     const status = startOrStop
     if(status === 'Start'){
-      this.props.dispatch(setStartOrStop('Stop'))
+      this.props.dispatch(setStart())
 
       this.intervalID = setInterval(
         () => this.handleNext(),
         speed * 1000
       )
-    }else if(status === 'Stop'){
-      this.props.dispatch(setStartOrStop('Start'))
+    } else {
+      this.props.dispatch(setStop())
       clearInterval(this.intervalID)
     }
   }
@@ -65,102 +65,50 @@ class GameBody extends React.Component {
 
   gliderGame = () =>{
     const board = createMatrix(40);
-    board[20][23] = !board[20][23]
-    board[21][24] = !board[21][24]
-    board[22][22] = !board[22][22]
-    board[22][23] = !board[22][23]
-    board[22][24] = !board[22][24]
+    const points = [[20,23],[21,24],[22,22],[22,23],[22,24]]
+    points.forEach(([x, y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
 
   smallExploder = () => {
     const board = createMatrix(40);
-    board[18][18] = !board[18][18]
-    board[19][17] = !board[19][17]
-    board[19][18] = !board[19][18]
-    board[19][19] = !board[19][19]
-    board[20][17] = !board[20][17]
-    board[20][19] = !board[20][19]
-    board[21][18] = !board[21][18]
-
+    const points = [[18,18],[19,17],[19,18],[19,19],[20,17],[20,19],[21,18]]
+    points.forEach(([x,y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
 
   exploder = () =>{
     const board = createMatrix(40);
-    board[17][17] = !board[17][17]
-    board[17][19] = !board[17][19]
-    board[17][21] = !board[17][21]
-    board[18][17] = !board[18][17]
-    board[18][21] = !board[18][21]
-    board[19][17] = !board[19][17]
-    board[19][21] = !board[19][21]
-    board[20][17] = !board[20][17]
-    board[20][21] = !board[20][21]
-    board[21][17] = !board[21][17]
-    board[21][19] = !board[21][19]
-    board[21][21] = !board[21][21]
-  
+    const points = [[17,17],[17,19],[17,21],[18,17],[18,21],[19,17],[19,21],[20,17],[20,21],[21,17],[21,19],[21,21]]
+    points.forEach(([x,y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
 
   tenCellRow = () =>{
     const board = createMatrix(40);
-    board[15][15] = !board[15][15]
-    board[15][16] = !board[15][16]
-    board[15][17] = !board[15][17]
-    board[15][18] = !board[15][18]
-    board[15][19] = !board[15][19]
-    board[15][20] = !board[15][20]
-    board[15][21] = !board[15][21]
-    board[15][22] = !board[15][22]
-    board[15][23] = !board[15][23]
-    board[15][24] = !board[15][24]
-  
+    const points = [[15,15],[15,16],[15,17],[15,18],[15,19],[15,20],[15,21],[15,22],[15,23],[15,24]]
+    points.forEach(([x,y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
 
   lightweight = () => {
     const board = createMatrix(40);
-    board[17][17] = !board[17][17]
-    board[17][18] = !board[17][18]
-    board[17][19] = !board[17][19]
-    board[17][20] = !board[17][20]
-    board[18][16] = !board[18][16]
-    board[18][20] = !board[18][20]
-    board[19][20] = !board[19][20]
-    board[20][16] = !board[20][16]
-    board[20][19] = !board[20][19]
-  
+    const points = [[17,17],[17,18],[17,19],[17,20],[18,16],[18,20],[19,20],[20,16],[20,19]]
+    points.forEach(([x,y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
 
 
   tumbler = () =>{ 
     const board = createMatrix(40);
-    board[15][16] = !board[15][16]
-    board[15][17] = !board[15][17]
-    board[15][19] = !board[15][19]
-    board[15][20] = !board[15][20]
-    board[16][16] = !board[16][16]
-    board[16][17] = !board[16][17]
-    board[16][19] = !board[16][19]
-    board[16][20] = !board[16][20]
-    board[17][17] = !board[17][17]
-    board[17][19] = !board[17][19]
-    board[18][15] = !board[18][15]
-    board[18][17] = !board[18][17]
-    board[18][19] = !board[18][19]
-    board[18][21] = !board[18][21]
-    board[19][15] = !board[19][15]
-    board[19][17] = !board[19][17]
-    board[19][19] = !board[19][19]
-    board[19][21] = !board[19][21]
-    board[20][15] = !board[20][16]
-    board[20][16] = !board[20][16]
-    board[20][20] = !board[20][20]
-    board[20][21] = !board[20][21]
-  
+    const points = [
+      [15,16],[15,17],[15,19],[15,20],
+      [16,16],[16,17],[16,19],[16,20],
+      [17,17],[17,19],
+      [18,15],[18,17],[18,19],[18,21],
+      [19,15],[19,17],[19,19],[19,21],
+      [20,15],[20,16],[20,20],[20,21]]
+    points.forEach(([x,y]) => board[x][y] = true)
     this.props.dispatch(newBoard(board))
   }
   changeHandle = (e) => {
