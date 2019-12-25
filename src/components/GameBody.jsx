@@ -87,7 +87,7 @@ class GameBody extends React.Component {
     this.props.dispatch(newBoard(tumblerBoard()))
   }
 
-  changeHandle = (e) => {
+  HandlePattern = (e) => {
     this.props.dispatch(setSelectedType(e.value))
     switch (e.value) {
       case 'Glider':
@@ -145,7 +145,7 @@ class GameBody extends React.Component {
         </Grid>
         <Grid >
           <Cell>
-            <DropdownType className="" options={options} onChange={this.changeHandle} value={selected} />
+            <DropdownType className="" options={options} onChange={this.HandlePattern} value={selected} />
           </Cell>
           <Cell>
             <Button onClick={this.handleNext}>Next</Button>
