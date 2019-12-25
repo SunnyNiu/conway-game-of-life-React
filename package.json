@@ -23,6 +23,7 @@
   "scripts": {
     "start": "webpack && node server",
     "dev": "nodemon --watch & webpack --watch",
+    "dev:server": "nodemon .",
     "test": "jest --watchAll",
     "deploy": "gh-pages -d build"
   },

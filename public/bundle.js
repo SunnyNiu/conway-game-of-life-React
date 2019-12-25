@@ -262,111 +262,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-dropdown/style.css":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/react-dropdown/style.css ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ".Dropdown-root {\n  position: relative;\n}\n\n.Dropdown-control {\n  position: relative;\n  overflow: hidden;\n  background-color: white;\n  border: 1px solid #ccc;\n  border-radius: 2px;\n  box-sizing: border-box;\n  color: #333;\n  cursor: default;\n  outline: none;\n  padding: 8px 52px 8px 10px;\n  transition: all 200ms ease;\n}\n\n.Dropdown-control:hover {\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);\n}\n\n.Dropdown-arrow {\n  border-color: #999 transparent transparent;\n  border-style: solid;\n  border-width: 5px 5px 0;\n  content: ' ';\n  display: block;\n  height: 0;\n  margin-top: -ceil(2.5);\n  position: absolute;\n  right: 10px;\n  top: 14px;\n  width: 0\n}\n\n.is-open .Dropdown-arrow {\n  border-color: transparent transparent #999;\n  border-width: 0 5px 5px;\n}\n\n.Dropdown-menu {\n  background-color: white;\n  border: 1px solid #ccc;\n  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);\n  box-sizing: border-box;\n  margin-top: -1px;\n  max-height: 200px;\n  overflow-y: auto;\n  position: absolute;\n  top: 100%;\n  width: 100%;\n  z-index: 1000;\n  -webkit-overflow-scrolling: touch;\n}\n\n.Dropdown-menu .Dropdown-group > .Dropdown-title{\n  padding: 8px 10px;\n  color: rgba(51, 51, 51, 1);\n  font-weight: bold;\n  text-transform: capitalize;\n}\n\n.Dropdown-option {\n  box-sizing: border-box;\n  color: rgba(51, 51, 51, 0.8);\n  cursor: pointer;\n  display: block;\n  padding: 8px 10px;\n}\n\n.Dropdown-option:last-child {\n  border-bottom-right-radius: 2px;\n   border-bottom-left-radius: 2px;\n}\n\n.Dropdown-option:hover {\n  background-color: #f2f9fc;\n  color: #333;\n}\n\n.Dropdown-option.is-selected {\n  background-color: #f2f9fc;\n  color: #333;\n}\n\n.Dropdown-noresults {\n  box-sizing: border-box;\n  color: #ccc;\n  cursor: default;\n  display: block;\n  padding: 8px 10px;\n}\n", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
-
-      if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
-      }
-
-      return content;
-    }).join('');
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
-
-
-  list.i = function (modules, mediaQuery) {
-    if (typeof modules === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
-    }
-
-    for (var i = 0; i < modules.length; i++) {
-      var item = [].concat(modules[i]);
-
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
-        } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
-        }
-      }
-
-      list.push(item);
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
-
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot).concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
-
-/***/ }),
-
 /***/ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
@@ -34716,33 +34611,6 @@ exports.default = Dropdown;
 
 /***/ }),
 
-/***/ "./node_modules/react-dropdown/style.css":
-/*!***********************************************!*\
-  !*** ./node_modules/react-dropdown/style.css ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/react-dropdown/style.css");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = "head";
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -41239,299 +41107,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var stylesInDom = {};
-
-var isOldIE = function isOldIE() {
-  var memo;
-  return function memorize() {
-    if (typeof memo === 'undefined') {
-      // Test for IE <= 9 as proposed by Browserhacks
-      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-      // Tests for existence of standard globals is to allow style-loader
-      // to operate correctly into non-standard environments
-      // @see https://github.com/webpack-contrib/style-loader/issues/177
-      memo = Boolean(window && document && document.all && !window.atob);
-    }
-
-    return memo;
-  };
-}();
-
-var getTarget = function getTarget() {
-  var memo = {};
-  return function memorize(target) {
-    if (typeof memo[target] === 'undefined') {
-      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-        try {
-          // This will throw an exception if access to iframe is blocked
-          // due to cross-origin restrictions
-          styleTarget = styleTarget.contentDocument.head;
-        } catch (e) {
-          // istanbul ignore next
-          styleTarget = null;
-        }
-      }
-
-      memo[target] = styleTarget;
-    }
-
-    return memo[target];
-  };
-}();
-
-function listToStyles(list, options) {
-  var styles = [];
-  var newStyles = {};
-
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var css = item[1];
-    var media = item[2];
-    var sourceMap = item[3];
-    var part = {
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    };
-
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = {
-        id: id,
-        parts: [part]
-      });
-    } else {
-      newStyles[id].parts.push(part);
-    }
-  }
-
-  return styles;
-}
-
-function addStylesToDom(styles, options) {
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i];
-    var domStyle = stylesInDom[item.id];
-    var j = 0;
-
-    if (domStyle) {
-      domStyle.refs++;
-
-      for (; j < domStyle.parts.length; j++) {
-        domStyle.parts[j](item.parts[j]);
-      }
-
-      for (; j < item.parts.length; j++) {
-        domStyle.parts.push(addStyle(item.parts[j], options));
-      }
-    } else {
-      var parts = [];
-
-      for (; j < item.parts.length; j++) {
-        parts.push(addStyle(item.parts[j], options));
-      }
-
-      stylesInDom[item.id] = {
-        id: item.id,
-        refs: 1,
-        parts: parts
-      };
-    }
-  }
-}
-
-function insertStyleElement(options) {
-  var style = document.createElement('style');
-
-  if (typeof options.attributes.nonce === 'undefined') {
-    var nonce =  true ? __webpack_require__.nc : undefined;
-
-    if (nonce) {
-      options.attributes.nonce = nonce;
-    }
-  }
-
-  Object.keys(options.attributes).forEach(function (key) {
-    style.setAttribute(key, options.attributes[key]);
-  });
-
-  if (typeof options.insert === 'function') {
-    options.insert(style);
-  } else {
-    var target = getTarget(options.insert || 'head');
-
-    if (!target) {
-      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-    }
-
-    target.appendChild(style);
-  }
-
-  return style;
-}
-
-function removeStyleElement(style) {
-  // istanbul ignore if
-  if (style.parentNode === null) {
-    return false;
-  }
-
-  style.parentNode.removeChild(style);
-}
-/* istanbul ignore next  */
-
-
-var replaceText = function replaceText() {
-  var textStore = [];
-  return function replace(index, replacement) {
-    textStore[index] = replacement;
-    return textStore.filter(Boolean).join('\n');
-  };
-}();
-
-function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.css; // For old IE
-
-  /* istanbul ignore if  */
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = replaceText(index, css);
-  } else {
-    var cssNode = document.createTextNode(css);
-    var childNodes = style.childNodes;
-
-    if (childNodes[index]) {
-      style.removeChild(childNodes[index]);
-    }
-
-    if (childNodes.length) {
-      style.insertBefore(cssNode, childNodes[index]);
-    } else {
-      style.appendChild(cssNode);
-    }
-  }
-}
-
-function applyToTag(style, options, obj) {
-  var css = obj.css;
-  var media = obj.media;
-  var sourceMap = obj.sourceMap;
-
-  if (media) {
-    style.setAttribute('media', media);
-  }
-
-  if (sourceMap && btoa) {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    while (style.firstChild) {
-      style.removeChild(style.firstChild);
-    }
-
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var singleton = null;
-var singletonCounter = 0;
-
-function addStyle(obj, options) {
-  var style;
-  var update;
-  var remove;
-
-  if (options.singleton) {
-    var styleIndex = singletonCounter++;
-    style = singleton || (singleton = insertStyleElement(options));
-    update = applyToSingletonTag.bind(null, style, styleIndex, false);
-    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-  } else {
-    style = insertStyleElement(options);
-    update = applyToTag.bind(null, style, options);
-
-    remove = function remove() {
-      removeStyleElement(style);
-    };
-  }
-
-  update(obj);
-  return function updateStyle(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
-        return;
-      }
-
-      update(obj = newObj);
-    } else {
-      remove();
-    }
-  };
-}
-
-module.exports = function (list, options) {
-  options = options || {};
-  options.attributes = typeof options.attributes === 'object' ? options.attributes : {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-  // tags it will allow on a page
-
-  if (!options.singleton && typeof options.singleton !== 'boolean') {
-    options.singleton = isOldIE();
-  }
-
-  var styles = listToStyles(list, options);
-  addStylesToDom(styles, options);
-  return function update(newList) {
-    var mayRemove = [];
-
-    for (var i = 0; i < styles.length; i++) {
-      var item = styles[i];
-      var domStyle = stylesInDom[item.id];
-
-      if (domStyle) {
-        domStyle.refs--;
-        mayRemove.push(domStyle);
-      }
-    }
-
-    if (newList) {
-      var newStyles = listToStyles(newList, options);
-      addStylesToDom(newStyles, options);
-    }
-
-    for (var _i = 0; _i < mayRemove.length; _i++) {
-      var _domStyle = mayRemove[_i];
-
-      if (_domStyle.refs === 0) {
-        for (var j = 0; j < _domStyle.parts.length; j++) {
-          _domStyle.parts[j]();
-        }
-
-        delete stylesInDom[_domStyle.id];
-      }
-    }
-  };
-};
-
-/***/ }),
-
 /***/ "./node_modules/styled-components/dist/styled-components.browser.esm.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/styled-components/dist/styled-components.browser.esm.js ***!
@@ -44711,17 +44286,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _countAliveNeighbours__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../countAliveNeighbours */ "./src/countAliveNeighbours.js");
 /* harmony import */ var _Cell__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Cell */ "./src/components/Cell.js");
 /* harmony import */ var _Grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Grid */ "./src/components/Grid.js");
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dropdown/style.css */ "./node_modules/react-dropdown/style.css");
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../style/gameOfLive-styles */ "./src/style/gameOfLive-styles.jsx");
-/* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utility */ "./src/utility.js");
-/* harmony import */ var _redux_action__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../redux/action */ "./src/redux/action.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
-/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! lodash/cloneDeep */ "./node_modules/lodash/cloneDeep.js");
-/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns */ "./src/components/patterns.js");
+/* harmony import */ var _style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../style/gameOfLive-styles */ "./src/style/gameOfLive-styles.jsx");
+/* harmony import */ var _utility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utility */ "./src/utility.js");
+/* harmony import */ var _redux_action__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../redux/action */ "./src/redux/action.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! lodash/cloneDeep */ "./node_modules/lodash/cloneDeep.js");
+/* harmony import */ var lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns */ "./src/components/patterns.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44754,8 +44327,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-var options = ['Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler'];
+var options = ['Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'LightweightSpaceship', 'Tumbler'];
 
 var GameBody =
 /*#__PURE__*/
@@ -44776,16 +44348,16 @@ function (_React$Component) {
           dispatch = _this$props.dispatch;
       var x = Math.floor(index / size);
       var y = index % size;
-      var board = lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_11___default()(matrix);
+      var board = lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_10___default()(matrix);
       board[x][y] = !board[x][y];
-      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(board));
+      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(board));
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleNext", function () {
       var _this$props2 = _this.props,
           matrix = _this$props2.matrix,
           dispatch = _this$props2.dispatch;
-      var nextBoard = lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_11___default()(matrix);
+      var nextBoard = lodash_cloneDeep__WEBPACK_IMPORTED_MODULE_10___default()(matrix);
 
       for (var i = 0; i < matrix.length; i++) {
         for (var j = 0; j < matrix[i].length; j++) {
@@ -44794,7 +44366,7 @@ function (_React$Component) {
         }
       }
 
-      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(nextBoard));
+      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(nextBoard));
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleStartStop", function () {
@@ -44804,12 +44376,12 @@ function (_React$Component) {
           isRunning = _this$props3.isRunning;
 
       if (!isRunning) {
-        dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["startGame"])());
+        dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["startGame"])());
         _this.intervalID = setInterval(function () {
           return _this.handleNext();
         }, speed * 1000);
       } else {
-        dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["stopGame"])());
+        dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["stopGame"])());
         clearInterval(_this.intervalID);
       }
     });
@@ -44818,36 +44390,36 @@ function (_React$Component) {
       var _this$props4 = _this.props,
           matrix = _this$props4.matrix,
           dispatch = _this$props4.dispatch;
-      var nextBoard = Object(_utility__WEBPACK_IMPORTED_MODULE_7__["default"])(matrix.length);
-      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(nextBoard));
+      var nextBoard = Object(_utility__WEBPACK_IMPORTED_MODULE_6__["default"])(matrix.length);
+      dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(nextBoard));
     });
 
     _defineProperty(_assertThisInitialized(_this), "gliderGame", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["gliderGameBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["gliderGameBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "smallExploder", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["smallExploderBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["smallExploderBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "exploder", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["exploderBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["exploderBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "tenCellRow", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["tenCellRowBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["tenCellRowBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "lightweight", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["lightweightBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["lightweightBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "tumbler", function () {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_12__["tumblerBoard"])()));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["newBoard"])(Object(_patterns__WEBPACK_IMPORTED_MODULE_11__["tumblerBoard"])()));
     });
 
     _defineProperty(_assertThisInitialized(_this), "HandlePattern", function (e) {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["setSelectedType"])(e.value));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["setSelectedType"])(e.value));
 
       switch (e.value) {
         case 'Glider':
@@ -44870,7 +44442,7 @@ function (_React$Component) {
 
           break;
 
-        case 'Lightweight-spaceship':
+        case 'LightweightSpaceship':
           _this.lightweight();
 
           break;
@@ -44885,7 +44457,7 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "speedChange", function (value) {
-      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_8__["setSpeed"])(value));
+      _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["setSpeed"])(value));
 
       clearInterval(_this.intervalID);
       _this.intervalID = setInterval(function () {
@@ -44893,7 +44465,7 @@ function (_React$Component) {
       }, 1000 / _this.props.speed);
     });
 
-    _this.speedChange = lodash_debounce__WEBPACK_IMPORTED_MODULE_10___default()(_this.speedChange, 300);
+    _this.speedChange = lodash_debounce__WEBPACK_IMPORTED_MODULE_9___default()(_this.speedChange, 300);
     return _this;
   }
 
@@ -44921,27 +44493,29 @@ function (_React$Component) {
       }, matrix.reduce(function (acc, item) {
         return acc.concat(item);
       }, []).map(function (item, index) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["CellStyle"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["CellStyle"], {
           onClick: function onClick() {
             return _this2.handleCellClick(index);
           },
           key: index,
           value: item
         }, ' ');
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Grid__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["DropdownType"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Grid__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        width: 3
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["DropdownType"], {
         className: "",
         options: options,
         onChange: this.HandlePattern,
         value: selected
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Button"], {
         onClick: this.handleNext
-      }, "Next")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, isRunning ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      }, "Next")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, isRunning ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Button"], {
         onClick: this.handleStartStop
-      }, "Stop") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      }, "Stop") : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Button"], {
         onClick: this.handleStartStop
-      }, "Start")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Button"], {
+      }, "Start")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Button"], {
         onClick: this.clearBoard
-      }, "Clear")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Speed"], null, "Speed:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_6__["Input"], {
+      }, "Clear")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Speed"], null, "Speed:")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cell__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style_gameOfLive_styles__WEBPACK_IMPORTED_MODULE_5__["Input"], {
         id: "speed",
         type: "range",
         min: "1",
@@ -44969,7 +44543,7 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_9__["connect"])(mapStateToProps)(GameBody));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps)(GameBody));
 
 /***/ }),
 
@@ -45633,7 +45207,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0.5em;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: relative;\n    background-color: white;\n    border: 1px solid #ccc;\n    border-radius: 2px;\n    box-sizing: border-box;\n    color: palevioletred;\n    cursor: default;\n    outline: none;\n    padding: 8px 52px 8px 10px;\n    transition: all 200ms ease;\n    text-align: left;\n    display: block;\n    margin: 0.5em;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;

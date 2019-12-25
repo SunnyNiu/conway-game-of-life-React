@@ -12,7 +12,7 @@ import cloneDeep from 'lodash/cloneDeep'
 import { gliderGameBoard, smallExploderBoard, exploderBoard, tenCellRowBoard, lightweightBoard, tumblerBoard } from './patterns'
 
 const options = [
-  'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler'
+  'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'LightweightSpaceship', 'Tumbler'
 ]
 class GameBody extends React.Component {
   constructor () {
@@ -101,7 +101,7 @@ class GameBody extends React.Component {
       case '10-Cell-Row':
         this.tenCellRow()
         break
-      case 'Lightweight-spaceship':
+      case 'LightweightSpaceship':
         this.lightweight()
         break
       case 'Tumbler':
@@ -143,7 +143,7 @@ class GameBody extends React.Component {
             ))}
         </Grid>
         <Grid >
-          <Cell>
+          <Cell width ={3}>
             <DropdownType className="" options={options} onChange={this.HandlePattern} value={selected} />
           </Cell>
           <Cell>

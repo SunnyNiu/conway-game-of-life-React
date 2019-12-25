@@ -50,7 +50,19 @@ export const Speed = styled.button`
 `
 
 export const DropdownType = styled(Dropdown)`
-  margin: 0.5em;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: palevioletred;
+    cursor: default;
+    outline: none;
+    padding: 8px 52px 8px 10px;
+    transition: all 200ms ease;
+    text-align: left;
+    display: block;
+    margin: 0.5em;
 `
 export const Input = styled.input`
   margin: 2em;
