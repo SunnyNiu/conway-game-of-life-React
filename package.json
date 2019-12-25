@@ -23,12 +23,12 @@
   "scripts": {
     "start": "webpack && node server",
     "dev": "nodemon --watch & webpack --watch",
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "deploy": "gh-pages -d build"
   },
   "jest": {
     "setupFiles": [
-      "./tests/components/setup.js"
+      "./src/tests/setup.js"
     ]
   },
   "babel": {
