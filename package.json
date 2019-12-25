@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://sunnyniu.github.io/cornways-react",
   "dependencies": {
+    "enzyme": "^3.11.0",
     "lodash": "^4.17.15",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",

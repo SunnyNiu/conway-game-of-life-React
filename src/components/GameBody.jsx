@@ -9,12 +9,13 @@ import createMatrix from '../utility'
 import {newBoard, setStartOrStop, setSelectedType, setSpeed} from '../redux/action'
 import { connect } from 'react-redux'
 import debounce from 'lodash/debounce'
+import cloneDeep from 'lodash/cloneDeep'
 
 const options = [
   'Glider', 'Small-Exploder', 'Exploder', '10-Cell-Row', 'Lightweight-spaceship', 'Tumbler'
 ]
 class GameBody extends React.Component {
-    constructor() {
+  constructor() {
     super();
     this.speedChange = debounce(this.speedChange, 300);
   }
@@ -23,23 +24,15 @@ class GameBody extends React.Component {
     const { size, matrix } = this.props;
     const x = Math.floor(index / size);
     const y = index % size;
-    const board = createMatrix(size);
-    for (let i = 0; i < matrix.length; i++) {
-      for (let j = 0; j < matrix[i].length; j++) {
-        if (i === x && j === y) {
-          board[i][j] = !matrix[i][j];
-        } else {
-          board[i][j] = matrix[i][j];
-        }
-      }
-    }
+    const board = cloneDeep(matrix)
+    board[x][y] = !board[x][y]
+
     this.props.dispatch(newBoard(board))
   }
 
   handleNext = () =>{
     const { matrix } = this.props;
-
-    const nextBoard = createMatrix(matrix.length);
+    const nextBoard = cloneDeep(matrix)
     for (let i = 0; i < matrix.length; i++) {
       for (let j = 0; j < matrix[i].length; j++) {
         const allAliveNeighbours = countAliveNeighbours(i, j, matrix);

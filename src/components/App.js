@@ -3,15 +3,10 @@ import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
 import Cell from './Cell';
 import Grid from './Grid'
-import 'react-dropdown/style.css'
 import GameBody from './GameBody'
 import { connect } from 'react-redux'
 
 class App extends React.Component {
-
-  componentWillUnmount () {
-    clearInterval(this.intervalID)
-  }
 
   render() {
 
