@@ -1,34 +1,32 @@
-import React from "react";
+import React from 'react'
 import GameRulesAndDes from './GameRulesAndDescription'
 import GameText from './GameText'
-import Cell from './Cell';
+import Cell from './Cell'
 import Grid from './Grid'
 import GameBody from './GameBody'
 import { connect } from 'react-redux'
 
 class App extends React.Component {
-
-  render() {
-
+  render () {
     return (
       <Grid
-      columns ="100px 1fr 100px"
-      rows= {"minmax(45px, auto) 1fr minmax(45px, auto)"}
+        columns ="100px 1fr 100px"
+        rows= {'minmax(45px, auto) 1fr minmax(45px, auto)'}
       >
         <Cell width ={3} center>
-        <h1>The Game of Life</h1>
+          <h1>The Game of Life</h1>
         </Cell>
         <Cell></Cell>
         <Cell center>
           <GameText/>
-          <GameBody/> 
+          <GameBody/>
           <GameRulesAndDes/>
         </Cell>
-        <Cell>{"    "}</Cell>
+        <Cell>{'    '}</Cell>
         <Cell width={3}>
-          </Cell>  
+        </Cell>
       </Grid>
-    );
+    )
   }
 }
 const mapStateToProps = state => {
@@ -41,4 +39,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, null)(App)

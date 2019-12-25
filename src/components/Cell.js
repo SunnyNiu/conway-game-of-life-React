@@ -4,13 +4,13 @@ import PropTypes from 'prop-types'
 const Cell = styled.div`
   height : 100%;
   min-width: 0;
-  grid-column-end: ${({width = 1}) => `span ${width}`};
-  grid-row-end: ${({height = 1}) => `span ${height}`}
+  grid-column-end: ${({ width = 1 }) => `span ${width}`};
+  grid-row-end: ${({ height = 1 }) => `span ${height}`}
 
-  ${({left}) => left && `grid-column-start: ${left}`}
-  ${({top}) => top && `grid-row-start: ${top}`}
+  ${({ left }) => left && `grid-column-start: ${left}`}
+  ${({ top }) => top && `grid-row-start: ${top}`}
 
-  ${({center}) => center && `text-align: center`}
+  ${({ center }) => center && 'text-align: center'}
 
 `
 Cell.propTypes = {
@@ -20,4 +20,4 @@ Cell.propTypes = {
   left: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   center: PropTypes.bool
 }
-export default Cell;
+export default Cell

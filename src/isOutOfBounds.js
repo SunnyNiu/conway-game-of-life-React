@@ -1,8 +1,8 @@
-export function isOutOfBounds(index, array) {
-  const length = array.length;
+export function isOutOfBounds (index, array) {
+  const length = array.length
   if (index >= length || index < 0) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
 }
