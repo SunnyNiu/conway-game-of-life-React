@@ -26,7 +26,6 @@ class GameBody extends React.Component {
     const y = index % size;
     const board = cloneDeep(matrix)
     board[x][y] = !board[x][y]
-
     this.props.dispatch(newBoard(board))
   }
 
@@ -43,13 +42,14 @@ class GameBody extends React.Component {
   }
 
   handleStart = () =>{
-    const status = this.props.startOrStop
+    const {startOrStop, speed} = this.props
+    const status = startOrStop
     if(status === 'Start'){
       this.props.dispatch(setStartOrStop('Stop'))
 
       this.intervalID = setInterval(
         () => this.handleNext(),
-        this.props.speed * 1000
+        speed * 1000
       )
     }else if(status === 'Stop'){
       this.props.dispatch(setStartOrStop('Start'))
@@ -64,110 +64,102 @@ class GameBody extends React.Component {
   }
 
   gliderGame = () =>{
-    const matrix = createMatrix(40)
     const board = createMatrix(40);
-    board[20][23] = !matrix[20][23]
-    board[21][24] = !matrix[21][24]
-    board[22][22] = !matrix[22][22]
-    board[22][23] = !matrix[22][23]
-    board[22][24] = !matrix[22][24]
+    board[20][23] = !board[20][23]
+    board[21][24] = !board[21][24]
+    board[22][22] = !board[22][22]
+    board[22][23] = !board[22][23]
+    board[22][24] = !board[22][24]
     this.props.dispatch(newBoard(board))
   }
 
   smallExploder = () => {
-    const matrix = createMatrix(40)
     const board = createMatrix(40);
-    board[18][18] = !matrix[18][18]
-    board[19][17] = !matrix[19][17]
-    board[19][18] = !matrix[19][18]
-    board[19][19] = !matrix[19][19]
-    board[20][17] = !matrix[20][17]
-    board[20][19] = !matrix[20][19]
-    board[21][18] = !matrix[21][18]
+    board[18][18] = !board[18][18]
+    board[19][17] = !board[19][17]
+    board[19][18] = !board[19][18]
+    board[19][19] = !board[19][19]
+    board[20][17] = !board[20][17]
+    board[20][19] = !board[20][19]
+    board[21][18] = !board[21][18]
 
     this.props.dispatch(newBoard(board))
   }
 
   exploder = () =>{
-    const matrix = createMatrix(40)
     const board = createMatrix(40);
-    board[17][17] = !matrix[17][17]
-    board[17][19] = !matrix[17][19]
-    board[17][21] = !matrix[17][21]
-    board[18][17] = !matrix[18][17]
-    board[18][21] = !matrix[18][21]
-    board[19][17] = !matrix[19][17]
-    board[19][21] = !matrix[19][21]
-    board[20][17] = !matrix[20][17]
-    board[20][21] = !matrix[20][21]
-    board[21][17] = !matrix[21][17]
-    board[21][19] = !matrix[21][19]
-    board[21][21] = !matrix[21][21]
+    board[17][17] = !board[17][17]
+    board[17][19] = !board[17][19]
+    board[17][21] = !board[17][21]
+    board[18][17] = !board[18][17]
+    board[18][21] = !board[18][21]
+    board[19][17] = !board[19][17]
+    board[19][21] = !board[19][21]
+    board[20][17] = !board[20][17]
+    board[20][21] = !board[20][21]
+    board[21][17] = !board[21][17]
+    board[21][19] = !board[21][19]
+    board[21][21] = !board[21][21]
   
     this.props.dispatch(newBoard(board))
   }
 
   tenCellRow = () =>{
-    const matrix = createMatrix(40)
     const board = createMatrix(40);
-    board[15][15] = !matrix[15][15]
-    board[15][16] = !matrix[15][16]
-    board[15][17] = !matrix[15][17]
-    board[15][18] = !matrix[15][18]
-    board[15][19] = !matrix[15][19]
-    board[15][20] = !matrix[15][20]
-    board[15][21] = !matrix[15][21]
-    board[15][22] = !matrix[15][22]
-    board[15][23] = !matrix[15][23]
-    board[15][24] = !matrix[15][24]
+    board[15][15] = !board[15][15]
+    board[15][16] = !board[15][16]
+    board[15][17] = !board[15][17]
+    board[15][18] = !board[15][18]
+    board[15][19] = !board[15][19]
+    board[15][20] = !board[15][20]
+    board[15][21] = !board[15][21]
+    board[15][22] = !board[15][22]
+    board[15][23] = !board[15][23]
+    board[15][24] = !board[15][24]
   
     this.props.dispatch(newBoard(board))
   }
 
   lightweight = () => {
-    const matrix = createMatrix(40)
-
     const board = createMatrix(40);
-    board[17][17] = !matrix[17][17]
-    board[17][18] = !matrix[17][18]
-    board[17][19] = !matrix[17][19]
-    board[17][20] = !matrix[17][20]
-    board[18][16] = !matrix[18][16]
-    board[18][20] = !matrix[18][20]
-    board[19][20] = !matrix[19][20]
-    board[20][16] = !matrix[20][16]
-    board[20][19] = !matrix[20][19]
+    board[17][17] = !board[17][17]
+    board[17][18] = !board[17][18]
+    board[17][19] = !board[17][19]
+    board[17][20] = !board[17][20]
+    board[18][16] = !board[18][16]
+    board[18][20] = !board[18][20]
+    board[19][20] = !board[19][20]
+    board[20][16] = !board[20][16]
+    board[20][19] = !board[20][19]
   
     this.props.dispatch(newBoard(board))
   }
 
 
   tumbler = () =>{ 
-    const matrix = createMatrix(40)
-
     const board = createMatrix(40);
-    board[15][16] = !matrix[15][16]
-    board[15][17] = !matrix[15][17]
-    board[15][19] = !matrix[15][19]
-    board[15][20] = !matrix[15][20]
-    board[16][16] = !matrix[16][16]
-    board[16][17] = !matrix[16][17]
-    board[16][19] = !matrix[16][19]
-    board[16][20] = !matrix[16][20]
-    board[17][17] = !matrix[17][17]
-    board[17][19] = !matrix[17][19]
-    board[18][15] = !matrix[18][15]
-    board[18][17] = !matrix[18][17]
-    board[18][19] = !matrix[18][19]
-    board[18][21] = !matrix[18][21]
-    board[19][15] = !matrix[19][15]
-    board[19][17] = !matrix[19][17]
-    board[19][19] = !matrix[19][19]
-    board[19][21] = !matrix[19][21]
-    board[20][15] = !matrix[20][16]
-    board[20][16] = !matrix[20][16]
-    board[20][20] = !matrix[20][20]
-    board[20][21] = !matrix[20][21]
+    board[15][16] = !board[15][16]
+    board[15][17] = !board[15][17]
+    board[15][19] = !board[15][19]
+    board[15][20] = !board[15][20]
+    board[16][16] = !board[16][16]
+    board[16][17] = !board[16][17]
+    board[16][19] = !board[16][19]
+    board[16][20] = !board[16][20]
+    board[17][17] = !board[17][17]
+    board[17][19] = !board[17][19]
+    board[18][15] = !board[18][15]
+    board[18][17] = !board[18][17]
+    board[18][19] = !board[18][19]
+    board[18][21] = !board[18][21]
+    board[19][15] = !board[19][15]
+    board[19][17] = !board[19][17]
+    board[19][19] = !board[19][19]
+    board[19][21] = !board[19][21]
+    board[20][15] = !board[20][16]
+    board[20][16] = !board[20][16]
+    board[20][20] = !board[20][20]
+    board[20][21] = !board[20][21]
   
     this.props.dispatch(newBoard(board))
   }
@@ -207,14 +199,15 @@ class GameBody extends React.Component {
   }
 
   render(){
+    const {size, matrix, selected, speed, startOrStop} = this.props;
     let columns = "";
-    for (let i = 0; i < this.props.size; i++) {
+    for (let i = 0; i < size; i++) {
       columns += "auto ";
     }
     return (
       <>
       <Grid gap="0" columns={columns}>
-            {this.props.matrix
+            {matrix
               .reduce((acc, item) => acc.concat(item), [])
               .map((item, index) => (
                 <CellStyle
@@ -228,13 +221,13 @@ class GameBody extends React.Component {
           </Grid>
           <Grid >   
             <Cell>    
-            <DropdownType className="" options={options} onChange={this.changeHandle} value={this.props.selected} />
+            <DropdownType className="" options={options} onChange={this.changeHandle} value={selected} />
             </Cell>
             <Cell> 
             <Button onClick={this.handleNext}>Next</Button>
             </Cell>
             <Cell> 
-            <Button onClick={this.handleStart}>{this.props.startOrStop}</Button>
+            <Button onClick={this.handleStart}>{startOrStop}</Button>
             </Cell>
             <Cell> 
             <Button onClick={this.clearBoard}>Clear</Button>
@@ -243,7 +236,7 @@ class GameBody extends React.Component {
              <Speed>Speed:</Speed>
             </Cell>
             <Cell> 
-            <Input id="speed" type="range" min="1" max="10" step="1" value={this.props.speed} onChange={e => this.speedChange(e.target.value)}  title="speed dial"/>
+            <Input id="speed" type="range" min="1" max="10" step="1" value={speed} onChange={e => this.speedChange(e.target.value)}  title="speed dial"/>
             </Cell>
           </Grid>
           </>
