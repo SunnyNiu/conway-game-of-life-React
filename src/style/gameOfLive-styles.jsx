@@ -4,8 +4,7 @@ import Dropdown from 'react-dropdown'
 export const CellStyle = styled.div`
   background-color: ${props => (props.value ? 'green' : 'pink')};
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
+  /* padding: 3px; */
   text-align: center;
 `
 
@@ -34,19 +33,17 @@ export const BorderParagraph = styled(Paragraph)`
 export const Button = styled.button`
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px solid palevioletred;
+  font-size: 0.5em;
+  margin-top: 1em;
   border-radius: 3px;
 `
 
 export const Speed = styled.button`
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px none palevioletred;
-  border-radius: 3px;
+  font-size: 0.5em;
+  margin-top: 1em;
+  border: none;
 `
 
 export const DropdownType = styled(Dropdown)`
@@ -58,12 +55,11 @@ export const DropdownType = styled(Dropdown)`
     color: palevioletred;
     cursor: default;
     outline: none;
-    padding: 8px 52px 8px 10px;
     transition: all 200ms ease;
     text-align: left;
     display: block;
     margin: 0.5em;
 `
 export const Input = styled.input`
-  margin: 2em;
+  margin-top: 0.5em;
 `

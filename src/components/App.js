@@ -9,7 +9,7 @@ class App extends React.Component {
   render () {
     return (
       <Grid
-        columns ="100px 1fr 100px"
+        columns ="10vw 1fr 10vw"
         rows= {'minmax(45px, auto) 1fr minmax(45px, auto)'}
       >
         <Cell width ={3} center>

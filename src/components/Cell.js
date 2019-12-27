@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Cell = styled.div`
   height : 100%;
-  min-width: 0;
+  min-width: ${({ minWidth = 0 }) => minWidth};
   grid-column-end: ${({ width = 1 }) => `span ${width}`};
   grid-row-end: ${({ height = 1 }) => `span ${height}`}
 

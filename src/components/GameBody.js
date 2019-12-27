@@ -124,11 +124,11 @@ class GameBody extends React.Component {
     const { size, matrix, selected, speed, isRunning } = this.props
     let columns = ''
     for (let i = 0; i < size; i++) {
-      columns += 'auto '
+      columns += '2vw '
     }
     return (
       <>
-        <Grid gap="0" columns={columns}>
+        <Grid gap="0" columns={columns} minRowHeight="2vw">
           {matrix
             .reduce((acc, item) => acc.concat(item), [])
             .map((item, index) => (
@@ -137,27 +137,26 @@ class GameBody extends React.Component {
                 key={index}
                 value={item}
               >
-                {' '}
               </CellStyle>
             ))}
         </Grid>
         <Grid >
-          <Cell width ={3}>
+          <Cell minWidth="60px">
             <DropdownType className="" options={options} onChange={this.HandlePattern} value={selected} />
           </Cell>
-          <Cell>
+          <Cell minWidth="40px">
             <Button onClick={this.handleNext}>Next</Button>
           </Cell>
-          <Cell>
+          <Cell minWidth="40px">
             {isRunning ? <Button onClick={this.handleStartStop}>Stop</Button> : <Button onClick={this.handleStartStop}>Start</Button>}
           </Cell>
-          <Cell>
+          <Cell minWidth="40px">
             <Button onClick={this.clearBoard}>Clear</Button>
           </Cell>
-          <Cell>
+          <Cell minWidth="42px">
             <Speed>Speed:</Speed>
           </Cell>
-          <Cell>
+          <Cell minWidth="70px">
             <Input id="speed" type="range" min="1" max="10" step="1" value={speed} onChange={e => this.speedChange(e.target.value)} title="speed dial"/>
           </Cell>
         </Grid>

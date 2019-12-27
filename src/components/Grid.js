@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const autoRows = ({ minRowHeight = '20px' }) => `minmax(${minRowHeight}, auto)`
+const autoRows = ({ minRowHeight = '10px' }) => `minmax(${minRowHeight}, auto)`
 const frGetter = value => typeof value === 'number' ? `repeat(${value}, 1fr)` : value
 const gap = ({ gap = '8px' }) => gap
 
