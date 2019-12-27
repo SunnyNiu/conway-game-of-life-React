@@ -1018,7 +1018,9 @@ exports[`<App /> component tests renders App 1`] = `
                           <div
                             className="sc-iwsKbI jMTpXj"
                           >
-                            <styled.div>
+                            <styled.div
+                              width={3}
+                            >
                               <StyledComponent
                                 forwardedComponent={
                                   Object {
@@ -1071,9 +1073,11 @@ exports[`<App /> component tests renders App 1`] = `
                                   }
                                 }
                                 forwardedRef={null}
+                                width={3}
                               >
                                 <div
-                                  className="sc-dnqmqq hRHvvg"
+                                  className="sc-dnqmqq eNkgJX"
+                                  width={3}
                                 >
                                   <Styled(Dropdown)
                                     className=""
@@ -1084,7 +1088,7 @@ exports[`<App /> component tests renders App 1`] = `
                                         "Small-Exploder",
                                         "Exploder",
                                         "10-Cell-Row",
-                                        "Lightweight-spaceship",
+                                        "LightweightSpaceship",
                                         "Tumbler",
                                       ]
                                     }
@@ -1099,10 +1103,22 @@ exports[`<App /> component tests renders App 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-gzVnrw",
                                             "isStatic": false,
-                                            "lastClassName": "kFsTLF",
+                                            "lastClassName": "gnDSsL",
                                             "rules": Array [
                                               "
-  margin: 0.5em;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: palevioletred;
+    cursor: default;
+    outline: none;
+    padding: 8px 52px 8px 10px;
+    transition: all 200ms ease;
+    text-align: left;
+    display: block;
+    margin: 0.5em;
 ",
                                             ],
                                           },
@@ -1124,7 +1140,7 @@ exports[`<App /> component tests renders App 1`] = `
                                           "Small-Exploder",
                                           "Exploder",
                                           "10-Cell-Row",
-                                          "Lightweight-spaceship",
+                                          "LightweightSpaceship",
                                           "Tumbler",
                                         ]
                                       }
@@ -1132,7 +1148,7 @@ exports[`<App /> component tests renders App 1`] = `
                                     >
                                       <Dropdown
                                         baseClassName="Dropdown"
-                                        className="sc-gzVnrw kFsTLF"
+                                        className="sc-gzVnrw gnDSsL"
                                         onChange={[Function]}
                                         options={
                                           Array [
@@ -1140,14 +1156,14 @@ exports[`<App /> component tests renders App 1`] = `
                                             "Small-Exploder",
                                             "Exploder",
                                             "10-Cell-Row",
-                                            "Lightweight-spaceship",
+                                            "LightweightSpaceship",
                                             "Tumbler",
                                           ]
                                         }
                                         value=""
                                       >
                                         <div
-                                          className="Dropdown-root sc-gzVnrw kFsTLF"
+                                          className="Dropdown-root sc-gzVnrw gnDSsL"
                                         >
                                           <div
                                             aria-haspopup="listbox"

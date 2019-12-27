@@ -619,7 +619,9 @@ exports[`GameBody component tests it render GameBody 1`] = `
           <div
             className="sc-bwzfXH iyacBj"
           >
-            <styled.div>
+            <styled.div
+              width={3}
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
@@ -672,9 +674,11 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                width={3}
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-bdVaJa cphobo"
+                  width={3}
                 >
                   <Styled(Dropdown)
                     className=""
@@ -685,7 +689,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                         "Small-Exploder",
                         "Exploder",
                         "10-Cell-Row",
-                        "Lightweight-spaceship",
+                        "LightweightSpaceship",
                         "Tumbler",
                       ]
                     }
@@ -700,10 +704,22 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-dnqmqq",
                             "isStatic": false,
-                            "lastClassName": "hrWXqk",
+                            "lastClassName": "kTQakx",
                             "rules": Array [
                               "
-  margin: 0.5em;
+    position: relative;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: palevioletred;
+    cursor: default;
+    outline: none;
+    padding: 8px 52px 8px 10px;
+    transition: all 200ms ease;
+    text-align: left;
+    display: block;
+    margin: 0.5em;
 ",
                             ],
                           },
@@ -725,7 +741,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "Small-Exploder",
                           "Exploder",
                           "10-Cell-Row",
-                          "Lightweight-spaceship",
+                          "LightweightSpaceship",
                           "Tumbler",
                         ]
                       }
@@ -733,7 +749,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     >
                       <Dropdown
                         baseClassName="Dropdown"
-                        className="sc-dnqmqq hrWXqk"
+                        className="sc-dnqmqq kTQakx"
                         onChange={[Function]}
                         options={
                           Array [
@@ -741,14 +757,14 @@ exports[`GameBody component tests it render GameBody 1`] = `
                             "Small-Exploder",
                             "Exploder",
                             "10-Cell-Row",
-                            "Lightweight-spaceship",
+                            "LightweightSpaceship",
                             "Tumbler",
                           ]
                         }
                         value=""
                       >
                         <div
-                          className="Dropdown-root sc-dnqmqq hrWXqk"
+                          className="Dropdown-root sc-dnqmqq kTQakx"
                         >
                           <div
                             aria-haspopup="listbox"
