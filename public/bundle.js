@@ -44366,12 +44366,13 @@ function (_React$Component) {
           speed = _this$props3.speed,
           dispatch = _this$props3.dispatch,
           isRunning = _this$props3.isRunning;
+      console.log('speed', speed);
 
       if (!isRunning) {
         dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["startGame"])());
         _this.intervalID = setInterval(function () {
           return _this.handleNext();
-        }, speed * 1000);
+        }, 1000 / speed);
       } else {
         dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["stopGame"])());
         clearInterval(_this.intervalID);
@@ -44451,10 +44452,12 @@ function (_React$Component) {
     _defineProperty(_assertThisInitialized(_this), "speedChange", function (value) {
       _this.props.dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["setSpeed"])(value));
 
-      clearInterval(_this.intervalID);
-      _this.intervalID = setInterval(function () {
-        return _this.handleNext();
-      }, 1000 / _this.props.speed);
+      if (_this.props.isRunning) {
+        clearInterval(_this.intervalID);
+        _this.intervalID = setInterval(function () {
+          return _this.handleNext();
+        }, 1000 / _this.props.speed);
+      }
     });
 
     _this.speedChange = lodash_debounce__WEBPACK_IMPORTED_MODULE_9___default()(_this.speedChange, 300);

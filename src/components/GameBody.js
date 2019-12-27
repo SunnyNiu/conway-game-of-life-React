@@ -48,7 +48,7 @@ class GameBody extends React.Component {
 
       this.intervalID = setInterval(
         () => this.handleNext(),
-        speed * 1000
+        1000 / speed
       )
     } else {
       dispatch(stopGame())
@@ -113,11 +113,13 @@ class GameBody extends React.Component {
 
   speedChange = (value) => {
     this.props.dispatch(setSpeed(value))
-    clearInterval(this.intervalID)
-    this.intervalID = setInterval(
-      () => this.handleNext(),
-      1000 / this.props.speed
-    )
+    if (this.props.isRunning) {
+      clearInterval(this.intervalID)
+      this.intervalID = setInterval(
+        () => this.handleNext(),
+        1000 / this.props.speed
+      )
+    }
   }
 
   render () {
