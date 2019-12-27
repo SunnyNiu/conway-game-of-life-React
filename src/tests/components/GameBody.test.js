@@ -1,7 +1,7 @@
 import React from 'react'
 import configureStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
-import { mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
 
 import GameBody from '../../components/GameBody'

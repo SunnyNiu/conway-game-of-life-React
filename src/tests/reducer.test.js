@@ -1,11 +1,3 @@
-import {
-  newBoard,
-  startGame,
-  stopGame
-  // setSelectedType,
-  // setSpeed
-} from '../redux/action'
-
 import gameReducer from '../redux/reducer'
 
 describe('gamereducer tests', () => {

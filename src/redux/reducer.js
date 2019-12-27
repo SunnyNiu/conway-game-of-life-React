@@ -1,4 +1,4 @@
-import createMatrix from '../utility'
+import createMatrix from '../functions/utility'
 const INITIAL_STATE = {
   matrix: createMatrix(40),
   size: 40,

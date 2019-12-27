@@ -1,4 +1,4 @@
-import createMatrix from '../utility'
+import createMatrix from '../functions/utility'
 
 export function gliderGameBoard () {
   const board = createMatrix(40)
