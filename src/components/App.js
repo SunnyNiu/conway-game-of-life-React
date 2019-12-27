@@ -4,7 +4,6 @@ import GameText from './GameText'
 import Cell from './Cell'
 import Grid from './Grid'
 import GameBody from './GameBody'
-import { connect } from 'react-redux'
 
 class App extends React.Component {
   render () {
@@ -29,14 +28,5 @@ class App extends React.Component {
     )
   }
 }
-const mapStateToProps = state => {
-  return {
-    matrix: state.matrix,
-    size: state.size,
-    selected: state.selected,
-    isRunning: state.isRunning,
-    speed: state.speed
-  }
-}
 
-export default connect(mapStateToProps, null)(App)
+export default App

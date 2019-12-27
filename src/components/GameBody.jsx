@@ -122,7 +122,6 @@ class GameBody extends React.Component {
 
   render () {
     const { size, matrix, selected, speed, isRunning } = this.props
-    console.log('matrix', matrix)
     let columns = ''
     for (let i = 0; i < size; i++) {
       columns += 'auto '

@@ -6,7 +6,6 @@ import renderer from 'react-test-renderer'
 import Cell from '../../components/Cell'
 
 describe('Cell component tests', () => {
-  // wip
   it('it render Cell', () => {
     const expected = 'Show'
     const wrapper = mount(<Cell>Show</Cell>)
