@@ -38,6 +38,12 @@ describe('Grid component tests', () => {
     expect(tree).toHaveStyleRule('grid-auto-rows', expected)
   })
 
+  it('grid-auto-rows props works with default value', () => {
+    const expected = 'minmax(10px,auto)'
+    const tree = renderer.create(<Grid >Show</Grid>).toJSON()
+    expect(tree).toHaveStyleRule('grid-auto-rows', expected)
+  })
+
   it('grid-template-rows props works', () => {
     const expected = '1'
     const tree = renderer.create(<Grid rows='1'>Show</Grid>).toJSON()
