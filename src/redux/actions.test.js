@@ -4,7 +4,7 @@ import {
   stopGame,
   setSelectedType,
   setSpeed
-} from '../redux/action'
+} from './action'
 
 describe('action tests', () => {
   it('newBoard returns expected board object', () => {

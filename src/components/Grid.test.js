@@ -3,10 +3,9 @@ import { mount } from 'enzyme'
 import 'jest-styled-components'
 import renderer from 'react-test-renderer'
 
-import Grid from '../../components/Grid'
+import Grid from './Grid'
 
 describe('Grid component tests', () => {
-  // wip
   it('it render Grid', () => {
     const expected = 'Show'
     const wrapper = mount(<Grid>Show</Grid>)
@@ -35,6 +34,12 @@ describe('Grid component tests', () => {
   it('grid-auto-rows props works', () => {
     const expected = 'minmax(21px,auto)'
     const tree = renderer.create(<Grid minRowHeight = '21px'>Show</Grid>).toJSON()
+    expect(tree).toHaveStyleRule('grid-auto-rows', expected)
+  })
+
+  it('grid-auto-rows props works with default value', () => {
+    const expected = 'minmax(10px,auto)'
+    const tree = renderer.create(<Grid >Show</Grid>).toJSON()
     expect(tree).toHaveStyleRule('grid-auto-rows', expected)
   })
 

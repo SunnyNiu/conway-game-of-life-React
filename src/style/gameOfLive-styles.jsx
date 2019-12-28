@@ -4,7 +4,6 @@ import Dropdown from 'react-dropdown'
 export const CellStyle = styled.div`
   background-color: ${props => (props.value ? 'green' : 'pink')};
   border: 1px solid rgba(0, 0, 0, 0.8);
-  /* padding: 3px; */
   text-align: center;
 `
 
@@ -34,7 +33,6 @@ export const Button = styled.button`
   display: inline;
   color: palevioletred;
   font-size: 0.5em;
-  margin-top: 1em;
   border-radius: 3px;
 `
 
@@ -42,7 +40,6 @@ export const Speed = styled.button`
   display: inline;
   color: palevioletred;
   font-size: 0.5em;
-  margin-top: 1em;
   border: none;
 `
 

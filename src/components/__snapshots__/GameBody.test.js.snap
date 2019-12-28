@@ -41,19 +41,20 @@ exports[`GameBody component tests it render GameBody 1`] = `
       speed={1}
     >
       <styled.div
-        columns="auto auto auto "
+        columns="2vw 2vw 2vw "
         gap="0"
+        minRowHeight="2vw"
       >
         <StyledComponent
-          columns="auto auto auto "
+          columns="2vw 2vw 2vw "
           forwardedComponent={
             Object {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-iwsKbI",
                 "isStatic": false,
-                "lastClassName": "iyacBj",
+                "lastClassName": "eAJvuI",
                 "rules": Array [
                   "
   display: grid;
@@ -97,7 +98,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 "rows": [Function],
               },
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-iwsKbI",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -106,9 +107,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
           }
           forwardedRef={null}
           gap="0"
+          minRowHeight="2vw"
         >
           <div
-            className="sc-bwzfXH gPnPbx"
+            className="sc-iwsKbI esoFeR"
           >
             <styled.div
               key="0"
@@ -121,17 +123,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -139,7 +139,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -151,12 +151,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -170,17 +168,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -188,7 +184,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -200,12 +196,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -219,17 +213,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -237,7 +229,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -249,12 +241,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -268,17 +258,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -286,7 +274,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -298,12 +286,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -317,17 +303,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -335,7 +319,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -347,12 +331,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -366,17 +348,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -384,7 +364,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -396,12 +376,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -415,17 +393,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -433,7 +409,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -445,12 +421,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -464,17 +438,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -482,7 +454,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -494,12 +466,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
             <styled.div
@@ -513,17 +483,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
+                      "componentId": "sc-bdVaJa",
                       "isStatic": false,
-                      "lastClassName": "bOfMjr",
+                      "lastClassName": "hckmgr",
                       "rules": Array [
                         "
   background-color: ",
                         [Function],
                         ";
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 8px;
-  font-size: 8px;
   text-align: center;
 ",
                       ],
@@ -531,7 +499,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-htpNat",
+                    "styledComponentId": "sc-bdVaJa",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -543,12 +511,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 value={false}
               >
                 <div
-                  className="sc-htpNat bOfMjr"
+                  className="sc-bdVaJa hckmgr"
                   onClick={[Function]}
                   value={false}
-                >
-                   
-                </div>
+                />
               </StyledComponent>
             </styled.div>
           </div>
@@ -561,9 +527,9 @@ exports[`GameBody component tests it render GameBody 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-iwsKbI",
                 "isStatic": false,
-                "lastClassName": "iyacBj",
+                "lastClassName": "eAJvuI",
                 "rules": Array [
                   "
   display: grid;
@@ -607,7 +573,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 "rows": [Function],
               },
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-iwsKbI",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -617,10 +583,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
           forwardedRef={null}
         >
           <div
-            className="sc-bwzfXH iyacBj"
+            className="sc-iwsKbI eAJvuI"
           >
             <styled.div
-              width={3}
+              minWidth="60px"
             >
               <StyledComponent
                 forwardedComponent={
@@ -628,13 +594,15 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -666,7 +634,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -674,11 +642,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
-                width={3}
+                minWidth="60px"
               >
                 <div
-                  className="sc-bdVaJa cphobo"
-                  width={3}
+                  className="sc-dnqmqq dnRCHk"
                 >
                   <Styled(Dropdown)
                     className=""
@@ -702,9 +669,9 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-dnqmqq",
+                            "componentId": "sc-gzVnrw",
                             "isStatic": false,
-                            "lastClassName": "kTQakx",
+                            "lastClassName": "kvDbHg",
                             "rules": Array [
                               "
     position: relative;
@@ -715,7 +682,6 @@ exports[`GameBody component tests it render GameBody 1`] = `
     color: palevioletred;
     cursor: default;
     outline: none;
-    padding: 8px 52px 8px 10px;
     transition: all 200ms ease;
     text-align: left;
     display: block;
@@ -726,7 +692,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "displayName": "Styled(Dropdown)",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-dnqmqq",
+                          "styledComponentId": "sc-gzVnrw",
                           "target": [Function],
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -749,7 +715,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                     >
                       <Dropdown
                         baseClassName="Dropdown"
-                        className="sc-dnqmqq kTQakx"
+                        className="sc-gzVnrw kvDbHg"
                         onChange={[Function]}
                         options={
                           Array [
@@ -764,7 +730,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                         value=""
                       >
                         <div
-                          className="Dropdown-root sc-dnqmqq kTQakx"
+                          className="Dropdown-root sc-gzVnrw kvDbHg"
                         >
                           <div
                             aria-haspopup="listbox"
@@ -792,20 +758,24 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 </div>
               </StyledComponent>
             </styled.div>
-            <styled.div>
+            <styled.div
+              minWidth="40px"
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -837,7 +807,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -845,9 +815,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                minWidth="40px"
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-dnqmqq cixopw"
                 >
                   <styled.button
                     onClick={[Function]}
@@ -858,16 +829,14 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-EHOje",
                             "isStatic": false,
-                            "lastClassName": "jyDAou",
+                            "lastClassName": "iHCXyf",
                             "rules": Array [
                               "
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px solid palevioletred;
+  font-size: 0.5em;
   border-radius: 3px;
 ",
                             ],
@@ -875,7 +844,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "displayName": "styled.button",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-EHOje",
                           "target": "button",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -886,7 +855,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       onClick={[Function]}
                     >
                       <button
-                        className="sc-gzVnrw jyDAou"
+                        className="sc-EHOje iHCXyf"
                         onClick={[Function]}
                       >
                         Next
@@ -896,20 +865,24 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 </div>
               </StyledComponent>
             </styled.div>
-            <styled.div>
+            <styled.div
+              minWidth="40px"
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -941,7 +914,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -949,9 +922,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                minWidth="40px"
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-dnqmqq cixopw"
                 >
                   <styled.button
                     onClick={[Function]}
@@ -962,16 +936,14 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-EHOje",
                             "isStatic": false,
-                            "lastClassName": "jyDAou",
+                            "lastClassName": "iHCXyf",
                             "rules": Array [
                               "
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px solid palevioletred;
+  font-size: 0.5em;
   border-radius: 3px;
 ",
                             ],
@@ -979,7 +951,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "displayName": "styled.button",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-EHOje",
                           "target": "button",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -990,7 +962,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       onClick={[Function]}
                     >
                       <button
-                        className="sc-gzVnrw jyDAou"
+                        className="sc-EHOje iHCXyf"
                         onClick={[Function]}
                       >
                         Start
@@ -1000,20 +972,24 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 </div>
               </StyledComponent>
             </styled.div>
-            <styled.div>
+            <styled.div
+              minWidth="40px"
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -1045,7 +1021,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1053,9 +1029,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                minWidth="40px"
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-dnqmqq cixopw"
                 >
                   <styled.button
                     onClick={[Function]}
@@ -1066,16 +1043,14 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-gzVnrw",
+                            "componentId": "sc-EHOje",
                             "isStatic": false,
-                            "lastClassName": "jyDAou",
+                            "lastClassName": "iHCXyf",
                             "rules": Array [
                               "
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px solid palevioletred;
+  font-size: 0.5em;
   border-radius: 3px;
 ",
                             ],
@@ -1083,7 +1058,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "displayName": "styled.button",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-gzVnrw",
+                          "styledComponentId": "sc-EHOje",
                           "target": "button",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1094,7 +1069,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       onClick={[Function]}
                     >
                       <button
-                        className="sc-gzVnrw jyDAou"
+                        className="sc-EHOje iHCXyf"
                         onClick={[Function]}
                       >
                         Clear
@@ -1104,20 +1079,24 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 </div>
               </StyledComponent>
             </styled.div>
-            <styled.div>
+            <styled.div
+              minWidth="42px"
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -1149,7 +1128,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1157,9 +1136,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                minWidth="42px"
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-dnqmqq eHwRgK"
                 >
                   <styled.button>
                     <StyledComponent
@@ -1168,24 +1148,22 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-htoDjs",
+                            "componentId": "sc-bZQynM",
                             "isStatic": false,
-                            "lastClassName": "leRKKP",
+                            "lastClassName": "beDWRn",
                             "rules": Array [
                               "
   display: inline;
   color: palevioletred;
-  font-size: 1em;
-  margin: 1em;
-  border: 2px none palevioletred;
-  border-radius: 3px;
+  font-size: 0.5em;
+  border: none;
 ",
                             ],
                           },
                           "displayName": "styled.button",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-htoDjs",
+                          "styledComponentId": "sc-bZQynM",
                           "target": "button",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1195,7 +1173,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       forwardedRef={null}
                     >
                       <button
-                        className="sc-htoDjs leRKKP"
+                        className="sc-bZQynM beDWRn"
                       >
                         Speed:
                       </button>
@@ -1204,20 +1182,24 @@ exports[`GameBody component tests it render GameBody 1`] = `
                 </div>
               </StyledComponent>
             </styled.div>
-            <styled.div>
+            <styled.div
+              minWidth="70px"
+            >
               <StyledComponent
                 forwardedComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-bdVaJa",
+                      "componentId": "sc-dnqmqq",
                       "isStatic": false,
-                      "lastClassName": "ifIeDu",
+                      "lastClassName": "dzVJZf",
                       "rules": Array [
                         "
   height : 100%;
-  min-width: 0;
+  min-width: ",
+                        [Function],
+                        ";
   grid-column-end: ",
                         [Function],
                         ";
@@ -1249,7 +1231,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       "width": [Function],
                     },
                     "render": [Function],
-                    "styledComponentId": "sc-bdVaJa",
+                    "styledComponentId": "sc-dnqmqq",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1257,9 +1239,10 @@ exports[`GameBody component tests it render GameBody 1`] = `
                   }
                 }
                 forwardedRef={null}
+                minWidth="70px"
               >
                 <div
-                  className="sc-bdVaJa ifIeDu"
+                  className="sc-dnqmqq dzVJZf"
                 >
                   <styled.input
                     id="speed"
@@ -1277,19 +1260,19 @@ exports[`GameBody component tests it render GameBody 1`] = `
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-iwsKbI",
+                            "componentId": "sc-htoDjs",
                             "isStatic": false,
-                            "lastClassName": "hQZshA",
+                            "lastClassName": "hsbhgX",
                             "rules": Array [
                               "
-  margin: 2em;
+  margin-top: 0.5em;
 ",
                             ],
                           },
                           "displayName": "styled.input",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-iwsKbI",
+                          "styledComponentId": "sc-htoDjs",
                           "target": "input",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -1307,7 +1290,7 @@ exports[`GameBody component tests it render GameBody 1`] = `
                       value={1}
                     >
                       <input
-                        className="sc-iwsKbI hQZshA"
+                        className="sc-htoDjs hsbhgX"
                         id="speed"
                         max="10"
                         min="1"
