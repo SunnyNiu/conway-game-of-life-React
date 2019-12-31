@@ -26,7 +26,7 @@ class GameRulesAndDes extends React.Component {
         <Paragraph>
           Choose a figure from the pull-down menu or make one yourself by clicking on the cells with a mouse.
           A new generation of cells (corresponding to one iteration of the rules) is initiated by the 'Next'
-           button. The 'Start' button advances the game by several generations. Game speed is regulated by the speed dial and the size of the cells with the size dial.
+           button. The 'Start' button advances the game by several generations. Game speed is regulated by the speed dial.
         </Paragraph>
         <Title>Development</Title>
         <Paragraph>Developer: Sunny Niu. Just for learning and demo, which is resemble <a href='https://bitstorm.org/gameoflife/'>https://bitstorm.org/gameoflife/</a></Paragraph>
