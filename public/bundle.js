@@ -44366,7 +44366,6 @@ function (_React$Component) {
           speed = _this$props3.speed,
           dispatch = _this$props3.dispatch,
           isRunning = _this$props3.isRunning;
-      console.log('speed', speed);
 
       if (!isRunning) {
         dispatch(Object(_redux_action__WEBPACK_IMPORTED_MODULE_7__["startGame"])());

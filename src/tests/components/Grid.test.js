@@ -6,7 +6,6 @@ import renderer from 'react-test-renderer'
 import Grid from '../../components/Grid'
 
 describe('Grid component tests', () => {
-  // wip
   it('it render Grid', () => {
     const expected = 'Show'
     const wrapper = mount(<Grid>Show</Grid>)

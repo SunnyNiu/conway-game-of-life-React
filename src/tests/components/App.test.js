@@ -18,12 +18,4 @@ describe('<App /> component tests', () => {
     const actual = wrapper.text()
     expect(actual).toMatch(expected)
   })
-
-  it('renders <App /> contains <GameText />', () => {
-    const expected = '<GameText />'
-
-    const wrapper = shallow(<App/>)
-    const actual = wrapper.text()
-    expect(actual).toMatch(expected)
-  })
 })
