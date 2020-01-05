@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App from '../../components/App'
+import App from '../../src/components/App'
 
 describe('<App /> component tests', () => {
   it('renders <App /> contains <GameText />', () => {

@@ -3,9 +3,9 @@ import configureStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import toJson from 'enzyme-to-json'
-import { Button, DropdownType, Input, Speed, CellStyle } from '../../style/gameOfLive-styles'
+import { Button, DropdownType, Input, Speed, CellStyle } from '../../src/style/gameOfLive-styles'
 
-import GameBody from '../../components/GameBody'
+import GameBody from '../../src/components/GameBody'
 
 const middlewares = []
 const mockStore = configureStore(middlewares)

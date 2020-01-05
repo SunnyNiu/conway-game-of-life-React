@@ -31,7 +31,7 @@
   },
   "jest": {
     "setupFiles": [
-      "./src/tests/setup.js"
+      "./tests/setup.js"
     ]
   },
   "babel": {

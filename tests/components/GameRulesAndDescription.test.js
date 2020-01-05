@@ -1,14 +1,16 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import { Title, Paragraph } from '../../style/gameOfLive-styles'
-import GameText from '../../components/GameText'
+import { Title, Paragraph, BorderParagraph } from '../../src/style/gameOfLive-styles'
+
+import GameRulesAndDes from '../../src/components/GameRulesAndDescription'
 
 describe('<GameText /> component tests', () => {
-  const expected = 'The Game of Life is not your typical computer game'
-  const component = <GameText />
+  const component = <GameRulesAndDes />
   const wrapper = mount(component)
 
-  it('contains "The Game of Life is not your typical computer game"', () => {
+  it('contains "The Rules"', () => {
+    const expected = 'The Rules'
+
     const actual = wrapper.text()
     expect(actual).toMatch(expected)
   })
@@ -22,6 +24,12 @@ describe('<GameText /> component tests', () => {
   it('should contains <Paragraph />', () => {
     const expected = true
     const actual = wrapper.containsMatchingElement(Paragraph)
+    expect(actual).toBe(expected)
+  })
+
+  it('should contains <BorderParagraph />', () => {
+    const expected = true
+    const actual = wrapper.containsMatchingElement(BorderParagraph)
     expect(actual).toBe(expected)
   })
 })
