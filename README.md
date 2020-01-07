@@ -1,6 +1,8 @@
 ## conway-game-of-life-React
 https://sunnyniu.github.io/cornways-react/
 
+It is developed using Redux, Express, JavaScript, Superagent, Jest, Enzyme
+
 ## Install & run
 
 After cloning this repo
