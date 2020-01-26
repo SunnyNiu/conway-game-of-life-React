@@ -1,7 +1,7 @@
-## Available Scripts
+## conway-game-of-life-React
+https://sunnyniu.github.io/cornways-react/
 
-Form handling in React.
-
+It is developed using Redux, Express, JavaScript, Superagent, Jest, Enzyme
 
 ## Install & run
 
@@ -28,4 +28,4 @@ Launches the test runner in the interactive watch mode.
 
 Builds the app for production to the `build` folder.<br />
 
-# conway-game-of-life-React
+
