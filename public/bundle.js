@@ -45348,7 +45348,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  display: inline;\n  color: palevioletred;\n  font-size: 0.5em;\n  margin-top: 1em;\n  border: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline;\n  color: palevioletred;\n  font-size: 0.5em;\n  border: none;\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -45358,7 +45358,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: inline;\n  color: palevioletred;\n  font-size: 0.5em;\n  margin-top: 1em;\n  border-radius: 3px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline;\n  color: palevioletred;\n  font-size: 0.5em;\n  border-radius: 3px;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -45408,7 +45408,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border: 1px solid rgba(0, 0, 0, 0.8);\n  /* padding: 3px; */\n  text-align: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border: 1px solid rgba(0, 0, 0, 0.8);\n  text-align: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
