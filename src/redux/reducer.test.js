@@ -1,4 +1,4 @@
-import gameReducer from '../src/redux/reducer'
+import gameReducer from './reducer'
 
 describe('gamereducer tests', () => {
   it('newBoard action sets the new board', () => {

@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 import 'jest-styled-components'
 import renderer from 'react-test-renderer'
 
-import Cell from '../../src/components/Cell'
+import Cell from './Cell'
 
 describe('Cell component tests', () => {
   it('it render Cell', () => {
